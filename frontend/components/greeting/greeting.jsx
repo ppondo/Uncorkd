@@ -11,19 +11,22 @@ export default ({ currentUser, logOut }) => {
     ) : (
         <div>
             <div className='session-links'>
-                <div className='session-link'>
-                    <Link to='/login' >SIGN IN</Link>
-                </div>
+                <Link className='session-link' to='/login' >SIGN IN</Link>
                 <div className="divider" />
-                <div className='session-link'>
-                    <Link to='/signup' >CREATE AN ACCOUNT</Link>
-                </div>
+                <Link className='session-link' to='/signup' >CREATE AN ACCOUNT</Link>
             </div>
             <div className='splash'>
-                <i className='fab fa-untappd'></i>
-                <h1 className='logo'>UNCORKD</h1>
-                <span className='logo-span'>DRINK SOCIALLY</span>
-                <h1 className='logo-message'>Discover and share your favorite beer.</h1>
+                <div className='splash-div'>
+                    <i className='fab fa-untappd'></i>
+                    <h1 className='logo'>UNCORKD</h1>
+                    <span className='logo-span'>DRINK SOCIALLY</span>
+                    <h1 className='logo-message'>Discover and share your favorite beer.</h1>
+                </div>
+                <div className='splash-div'>
+                    <img className= 'splash-picture' 
+                        src="https://untappd.akamaized.net/assets/custom/homepage/images/masthead-img-main.png" 
+                        alt="Phone-picture"/>
+                </div>
             </div>
         </div>
     );
