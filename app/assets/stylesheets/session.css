@@ -61,19 +61,19 @@ body {
     padding: 10px 10px 0px 10px;
     display: flex;
     font-size: 50px;
-    font-weight: bold
+    font-weight: bold;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 .logo-span {
     font-size: 11px;
     padding: 0px 10px 10px 10px;
     display: flex;
+    font-weight: 550
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 
-.login-form{
-
-}
 
 i.fab.fa-untappd {
     font-size: 6rem
@@ -85,8 +85,8 @@ i.fab.fa-untappd {
     padding: 10px 30px 30px 30px;
     width: 535px;
     text-align: center;
+    
 }
-
 
 
 .splash-picture {
@@ -107,3 +107,126 @@ i.fab.fa-untappd {
     height: 100px;
 }
 
+.login-background {
+    background: linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.8)), url(https://untappd.akamaized.net/assets/custom/homepage/images/beer-bg.jpg);
+    background-size: cover;
+    position: absolute;
+    max-width: 100%;
+    margin: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form-container{
+    background-color: white;
+    height: 450px;
+    width: 400px;
+    position: absolute;
+    padding: 24px 16px;
+    vertical-align: baseline;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.session-input {
+    width: 300px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 6px 8px 6px 12px;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    
+}
+
+.session-input > input {
+    border: none;
+    border-left: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 1em;
+    width: 100%;
+    padding-left: 12px;
+}
+
+.session-input > i {
+    font-size: 1rem;
+    padding-right: 12px;
+    color: #ccc;
+}
+
+.session-require {
+    color: #666;
+    line-height: 1.2em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.session-button {
+    width: 100%;
+    max-width: 300px;
+    padding: 12px 0;
+    background-color: #ffcc00;
+    color: #ffffff;
+    font-size: 18px;
+    border-radius: 4px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 10px;
+
+}
+
+.session-button:hover {
+    background-color: #ebc002;
+    cursor: pointer;
+    transition: background-color .25s ease-out, color .25s ease-out;
+}
+
+.signup-text {
+    border-top: 1px solid #ccc;
+    color: #666;
+    font-weight: 600;
+    font-size: 19px;
+    padding-top: 20px;
+}
+
+.signup-link {
+    text-align: center;
+    margin: 16px auto 0;
+    width: 300px;
+    color:#cc6600;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 19px;
+}
+
+.signup-link:hover {
+    color:#ff8a16;
+}
+
+
+.logo-login {
+    padding: 10px 10px 0px 10px;
+    display: flex;
+    font-size: 60px;
+    font-weight: 900;
+    color: #3f4040;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.logo-span-login {
+    font-size: 13px;
+    padding: 0px 10px 10px 10px;
+    display: flex;
+    color: #909090;
+    font-weight: 550
+    font-family: 'Josefin Sans', sans-serif;
+}

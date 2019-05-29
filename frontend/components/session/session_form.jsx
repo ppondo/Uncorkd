@@ -47,42 +47,48 @@ class SessionForm extends React.Component {
         let display;
         let emailInput;
         if (this.props.formType === 'Create Account') {
-            display = <Link to="/login">Log In</Link>;
-            emailInput = <label>Email:
+            display = <div className='signup-text'>Already signed up? <Link className='signup-link' to="/login">Sign In!</Link>
+            </div>
+            emailInput = <div className='session-input'>
+                    <i class="fas fa-envelope"></i>
                     <input
-                        type="email"
+                        type="text"
+                        placeholder='E-Mail'
                         value={this.state.email}
                         onChange={this.handleInput('email')} />
-                    </label>
-            message = <span>All fields below are required unless specified.</span>
+                    </div>
+            message = <strong className='session-require'>All fields below are required unless specified.</strong>
         } else {
-            display = <div className='signup-link'>New around here? <Link to="/signup">Sign Up!</Link>
+            display = <div className='signup-text'>New around here? <Link className='signup-link'to="/signup">Sign Up!</Link>
                       </div>
         }
         return (
-            <div>
-                <h2 className='logo'>UNCORKD</h2>
-                <span className='logo-span'>DRINK SOCIALLY</span>
-                <div className='login-form-box'>
+            <div className='login-background' >
+                <div className='login-form-container'>
+                    <h2 className='logo-login'>UNCORKD</h2>
+                    <span className='logo-span-login'>DRINK SOCIALLY</span>
+                    <div className='filler'></div>
                     {message}
                     <form className='login-form-box'>
                         {this.renderErrors()}
                         <div className='login-form'>
-                            <label>
-                                Username:
+                            <div className='session-input'>
+                                <i className="fas fa-user"></i>
                                 <input
                                     type="text"
+                                    placeholder='Username'
                                     value={this.state.username}
                                     onChange={this.handleInput('username')} />
-                            </label>
+                            </div>
                             { emailInput }
-                            <label>
-                                Password:
+                            <div className='session-input'>
+                                <i className="fas fa-lock"></i>
                                 <input
                                     type="password"
+                                    placeholder='Password'
                                     value={this.state.password}
                                     onChange={this.handleInput('password')} />
-                            </label>
+                            </div>
                             <button className ='session-button' onClick={this.handleSubmit}>{this.props.formType}</button>
                         </div>
                     </form>
