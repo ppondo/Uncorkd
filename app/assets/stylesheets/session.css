@@ -1,0 +1,49 @@
+.splash {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.session-links {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.session-link {
+    display: flex;
+    justify-content: flex-end;
+    border: 2px solid black;
+    text-decoration: none;
+}
+
+.divider{
+    width:15px;
+    height:auto;
+    display:inline-block;
+}
+
+.logo {
+    padding: 10px 10px 0px 10px;
+    display: flex;
+    
+}
+
+.logo-span {
+    font-size: 12px;
+    padding: 0px 10px 10px 10px;
+    display: flex;
+}
+
+body {
+    font-family: 'abel' sans-serif;
+}
+
+.login-form{
+
+}
+
+i.fab.fa-untappd {
+    height: 100px;
+}
+
