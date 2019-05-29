@@ -9,7 +9,7 @@ export default ({ currentUser, logOut }) => {
             <button className='logout-button'onClick={logOut} >Logout</button>
         </div>
     ) : (
-        <div>
+        <div className='splash-background'>
             <div className='session-links'>
                 <Link className='session-link' to='/login' >SIGN IN</Link>
                 <div className="divider" />
@@ -20,7 +20,8 @@ export default ({ currentUser, logOut }) => {
                     <i className='fab fa-untappd'></i>
                     <h1 className='logo'>UNCORKD</h1>
                     <span className='logo-span'>DRINK SOCIALLY</span>
-                    <h1 className='logo-message'>Discover and share your favorite beer.</h1>
+                    <div className='short-bar'></div>
+                    <h2 className='logo-message'>Discover and share your favorite beer.</h2>
                 </div>
                 <div className='splash-div'>
                     <img className= 'splash-picture' 
@@ -28,6 +29,7 @@ export default ({ currentUser, logOut }) => {
                         alt="Phone-picture"/>
                 </div>
             </div>
+            <div className='filler'></div>
         </div>
     );
 

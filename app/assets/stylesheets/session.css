@@ -7,10 +7,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #ffffff
+}
+
+.splash-background {
+    background: linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.8)), url(https://untappd.akamaized.net/assets/custom/homepage/images/beer-bg.jpg)
 }
 
 .splash-div {
-    max-width: 40%;
+    width: 535px;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -24,15 +29,26 @@ body {
     justify-content: flex-end;
     padding: 20px;
     box-sizing: border-box;
+    color: #ffffff
 }
 
 .session-link {
     display: flex;
     justify-content: flex-end;
-    border: 2px solid black;
+    border: 2px solid #ffffff;
     padding: 15px 20px;
     text-decoration: none;
     border-radius: 4px;
+    color: #ffffff;
+    margin: 0px 0px 16px 0px;
+    font-size: 1em;
+    background-color: transparent;
+}
+
+.session-link:hover {
+    background-color: #ffffff;
+    color: black;
+    transition: background-color .25s ease-out, color .25s ease-out;
 }
 
 .divider{
@@ -44,12 +60,12 @@ body {
 .logo {
     padding: 10px 10px 0px 10px;
     display: flex;
-    font-size: 40px;
+    font-size: 50px;
     font-weight: bold
 }
 
 .logo-span {
-    font-size: 10px;
+    font-size: 11px;
     padding: 0px 10px 10px 10px;
     display: flex;
 }
@@ -65,9 +81,12 @@ i.fab.fa-untappd {
 
 .logo-message {
     font-size: 40px;
-    font-weight: 700;
-    width: 70%
+    font-weight: 600;
+    padding: 10px 30px 30px 30px;
+    width: 535px;
+    text-align: center;
 }
+
 
 
 .splash-picture {
@@ -75,5 +94,16 @@ i.fab.fa-untappd {
     vertical-align: middle;
     max-width: 100%;
     height: auto;
+}
+
+.short-bar {
+    background: #ffc000;
+    height: 4px;
+    width: 50px;
+    margin: 20px auto;
+}
+
+.filler {
+    height: 100px;
 }
 
