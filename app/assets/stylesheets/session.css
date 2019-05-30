@@ -237,6 +237,8 @@ i.fab.fa-untappd {
     margin-bottom: 10px;
     border-radius: 4px;
     padding: 6px;
+    display: flex;
+    flex-direction: column;
 }
 
 .errors-li {

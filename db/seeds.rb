@@ -18,4 +18,4 @@
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
 
-demo_user = User.create(username: 'demo_user', email: 'demo@demo.com', password: 'demodemo')
+demo_user = User.create!(username: 'demo_user', email: 'demo@demo.com', password: 'demodemo')

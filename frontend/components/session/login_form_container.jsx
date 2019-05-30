@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { logIn } from '../../actions/session_actions';
 
 const msp = (state, ownProps) => ({
-    errors: Object.values(state.errors.session),
+    errors: state.errors.session.errors,
     formType: 'Sign In'
 });
 
