@@ -227,6 +227,19 @@ i.fab.fa-untappd {
     padding: 0px 10px 10px 10px;
     display: flex;
     color: #909090;
-    font-weight: 550
+    font-weight: 550;
     font-family: 'Josefin Sans', sans-serif;
 }
+
+.errors {
+    color: #E25858;
+    font-weight: 400;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    padding: 6px;
+}
+
+.errors-li {
+    padding-left: 5px;
+}
+

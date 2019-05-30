@@ -5,3 +5,17 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+# == Schema Information
+#
+# Table name: users
+#
+#  id              :bigint           not null, primary key
+#  username        :string           not null
+#  email           :string           not null
+#  password_digest :string           not null
+#  session_token   :string           not null
+#  profile_photo   :string
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+
+demo_user = User.create(username: 'demo_user', email: 'demo@demo.com', password: 'demodemo')

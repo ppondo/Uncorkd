@@ -7,7 +7,7 @@ export const logIn = (user) => dispatch => (
     SessionApiUtil.logIn(user).then( user => (
         dispatch(receiveCurrentUser(user))
     ), err => (
-        dispatch(receiveSessionErrors(err.responseJSON))
+        dispatch(receiveSessionErrors(err))
     ))
 )
 
@@ -15,7 +15,7 @@ export const signUp = (user) => dispatch => (
     SessionApiUtil.signUp(user).then(user => (
         dispatch(receiveCurrentUser(user))
     ), err => (
-        dispatch(receiveSessionErrors(err.responseJSON))
+        dispatch(receiveSessionErrors(err))
     ))
 )
 
@@ -34,5 +34,5 @@ const logOutCurrentUser = () => ({
 
 const receiveSessionErrors = (errors) => ({
     type: RECEIVE_SESSION_ERRORS,
-    errors
+    errors: errors.responseJSON
 })

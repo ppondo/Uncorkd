@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { logIn } from '../../actions/session_actions';
 
 class SessionForm extends React.Component {
     constructor(props) {
@@ -11,6 +12,7 @@ class SessionForm extends React.Component {
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleDemo = this.handleDemo.bind(this);
     }
 
     handleInput(field) {
@@ -25,32 +27,39 @@ class SessionForm extends React.Component {
         this.props.action(user);
     }
 
+    handleDemo(e) {
+        e.preventDefault();
+        const demo = Object.assign({},{ username: 'demo_user', password: 'demodemo' })
+        this.props.action(demo);
+    }
+
     renderErrors() {
-        let errs = this.props.errors.map((error, index) => {
-            
-            return (
-                <li key={`error-${index}`}>
-                    {error}
-                </li>
-            )   
-        });
+        // debugger
 
         return(
-            <ul>
-                {errs}
+            <ul className='errors'>
+                {this.props.errors.map((error, index) => (
+                    <li key={`error-${index}`}>
+                        {error}
+                    </li>
+                ))}
             </ul>
+
         );
+       
     }
 
     render() {
         let message;
         let display;
         let emailInput;
+        let demo;
+            
         if (this.props.formType === 'Create Account') {
             display = <div className='signup-text'>Already signed up? <Link className='signup-link' to="/login">Sign In!</Link>
             </div>
             emailInput = <div className='session-input'>
-                    <i class="fas fa-envelope"></i>
+                    <i className="fas fa-envelope"></i>
                     <input
                         type="text"
                         placeholder='E-Mail'
@@ -61,16 +70,17 @@ class SessionForm extends React.Component {
         } else {
             display = <div className='signup-text'>New around here? <Link className='signup-link'to="/signup">Sign Up!</Link>
                       </div>
+            demo = <button onClick={this.handleDemo} className='session-button'>Demo</button>
         }
         return (
             <div className='login-background' >
                 <div className='login-form-container'>
                     <h2 className='logo-login'>UNCORKD</h2>
                     <span className='logo-span-login'>DRINK SOCIALLY</span>
-                    <div className='filler'></div>
+                    {this.renderErrors()}
                     {message}
                     <form className='login-form-box'>
-                        {this.renderErrors()}
+                        {demo}
                         <div className='login-form'>
                             <div className='session-input'>
                                 <i className="fas fa-user"></i>

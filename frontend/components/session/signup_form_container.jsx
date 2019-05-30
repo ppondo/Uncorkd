@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { signUp } from '../../actions/session_actions';
 
 const msp = (state, ownProps) => ({
-    errors: state.errors.session,
+    errors: Object.values(state.errors.session),
     formType: 'Create Account'
 });
 
