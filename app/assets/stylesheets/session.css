@@ -2,28 +2,6 @@ body {
     font-family: 'ProximaNova', Helvetica, sans-serif;
 }
 
-
-.splash {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #ffffff
-}
-
-.splash-background {
-    background: linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.8)), url(https://untappd.akamaized.net/assets/custom/homepage/images/beer-bg.jpg)
-}
-
-.splash-div {
-    width: 535px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    vertical-align: middle;
-}
-
 .session-links {
     display: flex;
     justify-content: flex-end;
@@ -41,8 +19,9 @@ body {
     border-radius: 4px;
     color: #ffffff;
     margin: 0px 0px 16px 0px;
-    font-size: 1em;
+    font-size: 0.95em;
     background-color: transparent;
+    font-weight: lighter;
 }
 
 .session-link:hover {
@@ -73,36 +52,6 @@ body {
     font-family: 'Josefin Sans', sans-serif;
 }
 
-
-
-i.fab.fa-untappd {
-    font-size: 6rem
-}
-
-.logo-message {
-    font-size: 40px;
-    font-weight: 600;
-    padding: 10px 30px 30px 30px;
-    width: 535px;
-    text-align: center;
-    
-}
-
-
-.splash-picture {
-    display: inline-block;
-    vertical-align: middle;
-    max-width: 100%;
-    height: auto;
-}
-
-.short-bar {
-    background: #ffc000;
-    height: 4px;
-    width: 50px;
-    margin: 20px auto;
-}
-
 .filler {
     height: 100px;
 }
@@ -123,9 +72,25 @@ i.fab.fa-untappd {
     align-items: center;
 }
 
+.signup-background {
+    background: linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.8)), url(https://untappd.akamaized.net/assets/custom/homepage/images/beer-bg.jpg);
+    background-size: cover;
+    position: absolute;
+    max-width: 100%;
+    margin: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
 .login-form-container{
     background-color: white;
-    height: 450px;
+    height: 48%;
     width: 400px;
     position: absolute;
     padding: 24px 16px;
@@ -135,7 +100,38 @@ i.fab.fa-untappd {
     align-items: center;
 }
 
+.signup-form-container{
+    background-color: white;
+    height: 750px;
+    width: 600px;
+    padding: 24px 16px;
+    vertical-align: baseline;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* .signup-form-box {
+    display: flex;
+    flex-direction: column;
+} */
+
 .session-input {
+    width: 250px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 6px 8px 6px 12px;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 5px;
+}
+
+.session-input-2 {
     width: 300px;
     background-color: #ffffff;
     border: 1px solid #ccc;
@@ -145,8 +141,9 @@ i.fab.fa-untappd {
     box-sizing: border-box;
     display: flex;
     align-items: center;
-    
+    margin-top: 5px;
 }
+
 
 .session-input > input {
     border: none;
@@ -157,7 +154,22 @@ i.fab.fa-untappd {
     padding-left: 12px;
 }
 
+.session-input-2 > input {
+    border: none;
+    border-left: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 1em;
+    width: 100%;
+    padding-left: 12px;
+}
+
 .session-input > i {
+    font-size: 1rem;
+    padding-right: 12px;
+    color: #ccc;
+}
+
+.session-input-2 > i {
     font-size: 1rem;
     padding-right: 12px;
     color: #ccc;
@@ -173,6 +185,7 @@ i.fab.fa-untappd {
 .session-button {
     width: 100%;
     max-width: 300px;
+    width: 300px;
     padding: 12px 0;
     background-color: #ffcc00;
     color: #ffffff;
@@ -181,7 +194,25 @@ i.fab.fa-untappd {
     font-weight: 600;
     text-align: center;
     margin-bottom: 10px;
+    margin-top: 10px;
+    align-items: center;
 
+}
+
+.session-demo {
+    width: 100%;
+    max-width: 300px;
+    width: 300px;
+    padding: 12px 0;
+    background-color: #354c89;
+    color: #ffffff;
+    font-size: 18px;
+    border-radius: 4px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    align-items: center;
 }
 
 .session-button:hover {
@@ -232,7 +263,8 @@ i.fab.fa-untappd {
 }
 
 .errors {
-    color: #E25858;
+    color: #ffffff;
+    background-color:  #E25858;
     font-weight: 400;
     margin-bottom: 10px;
     border-radius: 4px;
@@ -243,5 +275,156 @@ i.fab.fa-untappd {
 
 .errors-li {
     padding-left: 5px;
+}
+
+.birthday {
+    display: flex;
+}
+
+.session-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-info-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.user-input {
+    width: 250px;
+    padding: 6px 8px 6px 12px;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    align-items: center;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 5px;
+}
+.user-input > input {
+    border: none;
+    box-sizing: border-box;
+    font-size: 1em;
+    width: 100%;
+    background-position: 10px 12px;
+    
+}
+.select-input {
+    width: 250px;
+    padding: 3px 8px 3px 12px;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    align-items: center;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 5px;
+    color: #ccc;
+}
+
+.user-select-input {
+    border: 0px;
+    background-color: #ffffff;
+    outline: 0px;
+    font-size: 1em;
+    padding-left: 1px;
+    text-align: start;
+    -webkit-appearance: none;
+}
+
+div.select-input:after {
+    content: "▼";
+    top: 4px;
+    right: 26px;
+    bottom: 0;
+    font-size: 0.7em;
+    line-height: 30px;
+    color: #ffcc00;
+    pointer-events: none;   
+}
+
+.birthday {
+    width: 250px;
+    padding: 3px 7px 3px 12px;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    align-items: center;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 5px;
+    color: #ccc;
+}
+
+div.birthday-input:after {
+    content: "▼";
+    top: 4px;
+    right: 26px;
+    bottom: 0;
+    font-size: 0.7em;
+    line-height: 30px;
+    color: #ffcc00;
+    pointer-events: none;   
+}
+
+.filler-div {
+    height: 80px;
+}
+
+.yellow-message {
+    background-color: #FFFFAA;
+    color: #666;
+    padding: 6px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.pass-message {
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.age-warning {
+    font-size: 0.7em;
+    color: #666;
+    width: 80%;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+.or {
+    margin: 10px auto;
+    width: 36px;
+    height: 36px;
+    text-align: center;
+    border-radius: 18px;
+    box-sizing: border-box;
+    border: 3px solid #ddd;
+    color: #ddd;
+    font-size: 0.8em;
+    padding-top: 8px;
 }
 

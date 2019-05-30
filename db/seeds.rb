@@ -17,5 +17,19 @@
 #  profile_photo   :string
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  birthday        :string
+#  first_name      :string
+#  last_name       :string
+#  gender          :string
+#  country         :string
+#
 
-demo_user = User.create!(username: 'demo_user', email: 'demo@demo.com', password: 'demodemo')
+
+demo_user = User.create!(username: 'demo_user', 
+                        email: 'demo@demo.com', 
+                        password: 'demodemo',
+                        birthday: '08/15/1996',
+                        first_name: 'demo',
+                        last_name: 'user',
+                        gender: 'male',
+                        country: 'USA')

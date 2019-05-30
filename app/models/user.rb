@@ -10,10 +10,16 @@
 #  profile_photo   :string
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  birthday        :string
+#  first_name      :string
+#  last_name       :string
+#  gender          :string
+#  country         :string
 #
 
 class User < ApplicationRecord
     validates :username, :email, :password_digest, :session_token, presence: true
+    validates :first_name, :last_name, :birthday, :country, presence: true
     validates :password, length: {minimum: 6, allow_nil: true}
     validates :username, :email, uniqueness: true
 
