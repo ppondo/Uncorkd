@@ -115,7 +115,7 @@ class SessionForm extends React.Component {
             gender = <div className='select-input'>
                         <span className= 'select-span'>
                             <select className='user-select-input' value={this.state.gender} onChange={this.handleInput('gender')}>
-                                <option defaultValue="">Selet Your Gender</option>
+                                <option className='def' defaultValue="">Selet Your Gender</option>
                                 <option value="Male">Male</option>
                                 <option value="Female">Female</option>
                                 <option value="null">Prefer Not to Say</option>
@@ -125,7 +125,7 @@ class SessionForm extends React.Component {
             month = <div className='birthday-input'>
                 <span className='select-span'>
                     <select className='user-select-input' value={this.state.month} onChange={this.handleInput('month')}>
-                                <option defaultValue="">MM</option>
+                                <option className='def'defaultValue="">MM</option>
                                 <option value="01">01</option>
                                 <option value="02">02</option>
                                 <option value="03">03</option>
@@ -180,7 +180,7 @@ class SessionForm extends React.Component {
             </div>
             year = <div className='birthday-input'>
                 <span className='select-span'>
-                    <select className='user-select-input' value={this.state.year} onChange={this.handleInput('year')}>
+                    <select className='def' className='user-select-input' value={this.state.year} onChange={this.handleInput('year')}>
                         <option defaultValue="">YYYY</option>
                         {possibleYears.reverse()}
                     </select>
@@ -189,7 +189,7 @@ class SessionForm extends React.Component {
             country = <div className='select-input'>
                 <span className='select-span'>
                     <select className='user-select-input' value={this.state.country} onChange={this.handleInput('country')}>
-                        <option defaultValue="">Select Your Country</option>
+                        <option className='def' defaultValue="">Select Your Country</option>
                         <option value="USA">USA</option>
                     </select>
                 </span>
@@ -256,7 +256,7 @@ class SessionForm extends React.Component {
                         
                     </form>
                     <br/>
-                    <div className='age-warning'>You must be of legal drinking age in your country to join Untappd. By clicking Create Account, you agree to our Terms of Use and our Privacy Policy</div>
+                    <div className='age-warning'>You must be of legal drinking age in your country to join Uncorkd. By clicking Create Account, you agree to our Terms of Use and our Privacy Policy</div>
                     <button className='session-button' onClick={this.handleSubmit}>{this.props.formType}</button>
                     <br />
                 </div>

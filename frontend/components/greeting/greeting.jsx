@@ -48,6 +48,16 @@ export default ({ currentUser, logOut }) => {
                     </div>
                 </div>
             </section>
+            <section className='map-feature'>
+                <div className='map-feature-img'>
+                    <img src={window.featureImg5} alt=""/>
+                </div>
+                <div className='map-feature-text'>
+                    <h1 className='map-feature-heading'>Explore nearby popular bars, breweries, and beers</h1>
+                    <div className='map-short-bar'></div>
+                    <p className='map-feature-body'>Not sure where to grab a pint? Untappd shows you popular bars and venues nearby and what’s on tap.</p>
+                </div>
+            </section>
             <section className='other-features'>
                 <h1 className='other-title'>Other Great Features</h1>
                 <div className='short-bar'></div>

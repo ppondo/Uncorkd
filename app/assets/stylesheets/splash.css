@@ -10,7 +10,7 @@ body {
 }
 
 .splash-background {
-    background: linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.8)), url(https://untappd.akamaized.net/assets/custom/homepage/images/beer-bg.jpg)
+    background: linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.8)), url(https://untappd.akamaized.net/assets/custom/homepage/images/beer-bg.jpg);
 }
 
 .splash-div {
@@ -186,3 +186,43 @@ i.fab.fa-untappd {
     font-weight: lighter
 }
 
+.map-feature {
+    background: linear-gradient(rgba(251,251,251,.7),#fbfbfb 80%),url(https://untappd.akamaized.net/assets/custom/homepage/images/map-bg.jpg);
+    border-bottom: 2px solid #ccc;
+    padding-top: 60px;
+    display: table;
+}
+
+.map-feature-text {
+    display: table-cell;
+    float: none;
+    vertical-align: middle;
+    width: 65%
+}
+
+.map-short-bar {
+    background: #ffc000;
+    height: 4px;
+    width: 50px;
+    margin: 20px 20px 20px 0;
+    text-align: left;
+}
+
+.map-feature-img {
+    display: table-cell;
+    float: none;
+    vertical-align: middle;
+    padding-left: 40px;
+}
+
+.map-feature-heading {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1em;
+}
+
+.map-feature-body{
+    font-size: 1.3em;
+    line-height: 1.4em;
+    font-weight: lighter;
+}

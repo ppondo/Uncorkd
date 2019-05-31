@@ -50,6 +50,7 @@ body {
     display: flex;
     font-weight: 550;
     font-family: 'Josefin Sans', sans-serif;
+    letter-spacing: 0.2em;
 }
 
 .filler {
@@ -90,7 +91,7 @@ body {
 
 .login-form-container{
     background-color: white;
-    height: 48%;
+    height: 450px;
     width: 400px;
     position: absolute;
     padding: 24px 16px;
@@ -102,7 +103,7 @@ body {
 
 .signup-form-container{
     background-color: white;
-    height: 750px;
+    height: 680px;
     width: 600px;
     padding: 24px 16px;
     vertical-align: baseline;
@@ -180,6 +181,8 @@ body {
     line-height: 1.2em;
     text-align: center;
     margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 0.9em;
 }
 
 .session-button {
@@ -213,6 +216,12 @@ body {
     margin-bottom: 10px;
     margin-top: 10px;
     align-items: center;
+}
+
+.session-demo:hover {
+    background-color: #354c89;
+    cursor: pointer;
+    transition: background-color .25s ease-out, color .25s ease-out;
 }
 
 .session-button:hover {
@@ -277,9 +286,6 @@ body {
     padding-left: 5px;
 }
 
-.birthday {
-    display: flex;
-}
 
 .session-info {
     display: flex;
@@ -335,7 +341,7 @@ body {
     color: #ccc;
 }
 
-.user-select-input {
+.user-select-input  {
     border: 0px;
     background-color: #ffffff;
     outline: 0px;
@@ -343,7 +349,9 @@ body {
     padding-left: 1px;
     text-align: start;
     -webkit-appearance: none;
+    color: #ccc;
 }
+
 
 div.select-input:after {
     content: "▼";
@@ -383,8 +391,9 @@ div.birthday-input:after {
     pointer-events: none;   
 }
 
+
 .filler-div {
-    height: 80px;
+    height: 40px;
 }
 
 .yellow-message {
@@ -396,13 +405,13 @@ div.birthday-input:after {
     border-radius: 4px;
     text-align: center;
     font-size: 0.9em;
+    width: 90%
 }
 
 .pass-message {
-    font-weight: bold;
+    font-weight: 550;
     padding: 10px;
-    margin-top: 10px;
-    font-size: 0.9em;
+    font-size: 14px;
     text-align: center;
 }
 
@@ -427,4 +436,6 @@ div.birthday-input:after {
     font-size: 0.8em;
     padding-top: 8px;
 }
+
+
 
