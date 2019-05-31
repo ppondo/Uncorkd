@@ -190,14 +190,16 @@ i.fab.fa-untappd {
     background: linear-gradient(rgba(251,251,251,.7),#fbfbfb 80%),url(https://untappd.akamaized.net/assets/custom/homepage/images/map-bg.jpg);
     border-bottom: 2px solid #ccc;
     padding-top: 60px;
-    display: table;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .map-feature-text {
     display: table-cell;
     float: none;
     vertical-align: middle;
-    width: 65%
+    width: 46%;
+    margin-top: 40px;
 }
 
 .map-short-bar {
@@ -206,6 +208,7 @@ i.fab.fa-untappd {
     width: 50px;
     margin: 20px 20px 20px 0;
     text-align: left;
+    line-height: 2em;
 }
 
 .map-feature-img {
@@ -219,6 +222,7 @@ i.fab.fa-untappd {
     font-size: 40px;
     font-weight: 700;
     line-height: 1em;
+    margin-top: 100px;
 }
 
 .map-feature-body{
