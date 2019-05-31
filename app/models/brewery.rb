@@ -13,4 +13,7 @@
 
 class Brewery < ApplicationRecord
     validates :name, :location, :description, presence: true
+    validates :name, uniqueness: true
+
+    has_many :beverages
 end

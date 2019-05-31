@@ -1,0 +1,1 @@
+json.partial! 'beverage', beverage: beverage

@@ -13,4 +13,6 @@
 
 class Beverage < ApplicationRecord
     validates :name, :style, :ABV, :description, :brewery_id, presence: true
+
+    belongs_to :Brewery
 end
