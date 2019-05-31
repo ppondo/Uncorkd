@@ -75,7 +75,7 @@ export default ({ currentUser, logOut }) => {
                 </div>
             </section>
             <div className='footer'>
-                <div className='footer-nav'>
+                {/* <div className='footer-nav'>
                     <Link className='footer-link' to='/' >Home</Link>
                     <Link className='footer-link' to='/signup' >The Pub</Link>
                     <Link className='footer-link' to='/signup' >Store</Link>
@@ -86,9 +86,9 @@ export default ({ currentUser, logOut }) => {
                     <Link className='footer-link' to='/signup' >API</Link>
                     <Link className='footer-link' to='/signup' >Terms</Link>
                     <Link className='footer-link' to='/signup' >Privacy</Link>
-                </div>
+                </div> */}
                 <div>
-                    <p className='footer-tag'>Uncorkd, Clone 2019</p>
+                    <p className='footer-tag'>Uncorkd 2019</p>
                 </div>
             </div>
             <div className='footer-icons'>

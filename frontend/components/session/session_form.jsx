@@ -57,6 +57,19 @@ class SessionForm extends React.Component {
         
     }
 
+    renderSignUpErrors() {
+        if (this.props.errors) {
+            return (
+                <ul className='sign-up-err'>
+                    {this.props.errors.map((error, key) => {
+                        return <li key={key} className="errors-li">{error}</li>;
+                    })}
+                </ul>
+            );
+        }
+
+    }
+
     render() {
         let possibleYears = [];
         for (let year = 1900; year <= 2010; year++) {
@@ -205,7 +218,7 @@ class SessionForm extends React.Component {
                 <div className='signup-form-container'>
                     <h2 className='logo-login'>UNCORKD</h2>
                     <span className='logo-span-login'>DRINK SOCIALLY</span>
-                    {this.renderErrors()}
+                    {this.renderSignUpErrors()}
                     <div className='yellow-message'> This app is my clone of UNTAPPD, a social media platform designed for those who love beer! Enjoy!</div>
                     {message}
                     <form className='signup-form-box'>
@@ -253,12 +266,13 @@ class SessionForm extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        
+                        <div className='submit-container'>
+                        <br/>
+                        <div className='age-warning'>You must be of legal drinking age in your country to join Uncorkd. By clicking Create Account, you agree to our Terms of Use and our Privacy Policy</div>
+                        <button className='session-button' onClick={this.handleSubmit}>{this.props.formType}</button>
+                        <br />
+                        </div>
                     </form>
-                    <br/>
-                    <div className='age-warning'>You must be of legal drinking age in your country to join Uncorkd. By clicking Create Account, you agree to our Terms of Use and our Privacy Policy</div>
-                    <button className='session-button' onClick={this.handleSubmit}>{this.props.formType}</button>
-                    <br />
                 </div>
             </div>
         ) : (
