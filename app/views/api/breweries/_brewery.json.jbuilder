@@ -1,4 +1,4 @@
-json.extract! beverage, :id, 
+json.extract! brewery, :id, 
                         :name, 
                         :location, 
                         :description, 

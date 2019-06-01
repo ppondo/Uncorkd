@@ -19,9 +19,11 @@ class BreweryIndex extends React.Component {
         })
 
         return (
-            <div>
+            <div className='brewery-index-container'>
                 {BrewIndexItems}
             </div>
         )
     }
 }
+
+export default BreweryIndex;

@@ -25,11 +25,18 @@
 #
 
 
-demo_user = User.create!(username: 'demo_user', 
-                        email: 'demo@demo.com', 
-                        password: 'demodemo',
-                        birthday: '08/15/1996',
-                        first_name: 'demo',
-                        last_name: 'user',
-                        gender: 'male',
-                        country: 'USA')
+# demo_user = User.create!(username: 'demo_user', 
+#                         email: 'demo@demo.com', 
+#                         password: 'demodemo',
+#                         birthday: '08/15/1996',
+#                         first_name: 'demo',
+#                         last_name: 'user',
+#                         gender: 'male',
+#                         country: 'USA')
+
+brewery1 = Brewery.create!(name: 'Guinness',
+                           location: 'St. James Gate, Dublin Ireland',
+                           description: 'The Guinness® brand enjoys a global reputation as a uniquely authentic beer and the best-selling stout in the world. ')
+brewery2 = Brewery.create!(name: 'Fat Orange Cat Brew Co.',
+                           location: 'East Hampton, CT United States',
+                           description: 'Connecticiut based brewery specializing in craft IPAs. ')

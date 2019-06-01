@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { logIn } from '../../actions/session_actions';
+
 
 class SessionForm extends React.Component {
     constructor(props) {
@@ -42,6 +42,10 @@ class SessionForm extends React.Component {
         e.preventDefault();
         const demo = Object.assign({},{ username: 'demo_user', password: 'demodemo' })
         this.props.action(demo);
+    }
+
+    componentWillUnmount() {
+        this.props.clearErrors();
     }
 
     renderErrors() {
@@ -128,7 +132,7 @@ class SessionForm extends React.Component {
             gender = <div className='select-input'>
                         <span className= 'select-span'>
                             <select className='user-select-input' value={this.state.gender} onChange={this.handleInput('gender')}>
-                                <option className='def' defaultValue="">Selet Your Gender</option>
+                                <option defaultValue="">Selet Your Gender</option>
                                 <option value="Male">Male</option>
                                 <option value="Female">Female</option>
                                 <option value="null">Prefer Not to Say</option>
@@ -138,7 +142,7 @@ class SessionForm extends React.Component {
             month = <div className='birthday-input'>
                 <span className='select-span'>
                     <select className='user-select-input' value={this.state.month} onChange={this.handleInput('month')}>
-                                <option className='def'defaultValue="">MM</option>
+                                <option defaultValue="">MM</option>
                                 <option value="01">01</option>
                                 <option value="02">02</option>
                                 <option value="03">03</option>
@@ -202,7 +206,7 @@ class SessionForm extends React.Component {
             country = <div className='select-input'>
                 <span className='select-span'>
                     <select className='user-select-input' value={this.state.country} onChange={this.handleInput('country')}>
-                        <option className='def' defaultValue="">Select Your Country</option>
+                        <option defaultValue="">Select Your Country</option>
                         <option value="USA">USA</option>
                     </select>
                 </span>

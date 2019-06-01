@@ -1,0 +1,88 @@
+body {
+    font-family: 'ProximaNova', Helvetica, sans-serif;
+}
+
+.nav-bar {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 80px;
+    height: 52px;
+    position: relative;
+    box-sizing: border-box;
+    background-color: #ffcb00;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav-logo {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    padding-right: 20px;
+}
+
+.nav-logo-title {
+    font-size: 35px;
+    font-weight: 700;
+    font-family: 'Josefin Sans', sans-serif;
+    letter-spacing: -0.05em;
+    vertical-align: baseline;
+    position: relative;
+    padding-top: 5px;
+}
+
+.nav-logo-span {
+    font-size: 8px;
+    font-weight: 550;
+    font-family: 'Josefin Sans', sans-serif;
+    letter-spacing: 0.2em;
+}   
+
+.logout-button {
+    border: 0;
+    width: 242px;
+    height: 36px;
+    font-size: 0.9em;
+    border-radius: 4px;
+    font-weight: 400;
+    outline: 0;
+    text-align: center;
+    vertical-align: center;
+    color: #ccc;
+}
+
+.logout-button:hover {
+    cursor: pointer;
+}
+
+.left-nav {
+    display: flex;
+}
+
+.right-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-link {
+    font-size: 20px;
+    font-weight: 300;
+    font-family: 'Josefin Sans', sans-serif;
+    letter-spacing: -0.05em;
+    vertical-align: baseline;
+    position: relative;
+    padding-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    
+}
+
+.nav-link-item {
+    text-decoration: none;
+    color: white;
+}
+

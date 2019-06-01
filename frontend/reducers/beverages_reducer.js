@@ -2,7 +2,7 @@ import {
     RECEIVE_ALL_BEVERAGES, 
     RECEIVE_BEVERAGE 
 } from '../actions/beverage_actions';
-import { merge } from lodash;
+import { merge } from 'lodash';
 
 const BeveragesReducer = (oldState = {}, action) => {
     Object.freeze(oldState);

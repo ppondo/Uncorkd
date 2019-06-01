@@ -1,6 +1,6 @@
 import SessionForm from './session_form';
 import { connect } from 'react-redux';
-import { signUp } from '../../actions/session_actions';
+import { signUp, clearErrors } from '../../actions/session_actions';
 
 const msp = (state) => {
 //  debugger
@@ -10,7 +10,8 @@ const msp = (state) => {
 };
 
 const mdp = dispatch => ({
-    action: (user) => dispatch(signUp(user))
+    action: (user) => dispatch(signUp(user)),
+    clearErrors: () => dispatch(clearErrors())
 })
 
 export default connect(msp, mdp)(SessionForm);
