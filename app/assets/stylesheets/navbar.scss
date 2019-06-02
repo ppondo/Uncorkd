@@ -2,18 +2,18 @@ body {
     font-family: 'ProximaNova', Helvetica, sans-serif;
 }
 
-.nav-bar {
+.nav {
     width: 100%;
-    margin: 0 auto;
-    padding: 0 90px;
     height: 52px;
-    box-sizing: border-box;
-    background-color: #ffcb00;
-    display: flex;
-    justify-content: space-evenly;
     position: fixed;
     top: 0; 
-   
+    background-color: #ffcb00;
+}
+
+.nav-bar {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
 }
 
 .nav-logo {
@@ -60,7 +60,6 @@ body {
 
 .left-nav {
     display: flex;
-    padding-right: 200px;
 }
 
 .right-nav {

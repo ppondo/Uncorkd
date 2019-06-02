@@ -1,12 +1,14 @@
 body {
     font-family: 'ProximaNova', Helvetica, sans-serif;
+    
 }
 
 .splash {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #ffffff
+    color: #ffffff;
+    
 }
 
 .splash-background {
@@ -53,18 +55,21 @@ i.fab.fa-untappd {
 .feature-bar {
     border-bottom: 2px solid #ccc;
     height: 80px;
+    background-color: #ffffff; 
 }
 
 .feature {
     padding-top: 60px;
     padding-bottom: 60px;
     border-bottom: 2px solid #ccc;
+    background-color: #ffffff; 
 }
 
 .feature-box {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #ffffff; 
 }
 
 .feature-content {
@@ -136,6 +141,7 @@ i.fab.fa-untappd {
 
 .footer-icons {
     height: 70px;
+    background-color: #ffffff; 
 }
 
 .other-features {
@@ -145,6 +151,7 @@ i.fab.fa-untappd {
     max-width: 100%;
     padding-top: 60px;
     padding-bottom: 60px;
+    background-color: #ffffff; 
 }
 
 .other-features-box {

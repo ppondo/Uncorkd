@@ -8,7 +8,7 @@ const msp = (state, ownProps) => ({
 });
 
 const mdp = dispatch => ({
-    fetchBrewery: id => dispatch(fetchBrewery(id))
+    fetchBrewery: (id) => dispatch(fetchBrewery(id))
 })
 
-export default withRouter(connect(msp, mdp)(BreweryShow));
+export default connect(msp, mdp)(BreweryShow);

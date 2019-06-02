@@ -11,20 +11,20 @@ export const fetchBrewery = (id) => dispatch => (
     BreweryApiUtil.fetchBrewery(id).then(brewery => dispatch(receiveBrewery(brewery)))
 )
 
-export const createBrewery = (brewery) => dispatch => (
-    BreweryApiUtil.createBrewery(brewery).then(brewery => dispatch(receiveBrewery(brewery)))
-)
+// export const createBrewery = (brewery) => dispatch => (
+//     BreweryApiUtil.createBrewery(brewery).then(brewery => dispatch(receiveBrewery(brewery)))
+// )
 
-export const updateBrewery = (brewery) => dispatch => (
-    BreweryApiUtil.updateBrewery(brewery).then(brewery => dispatch(receiveBrewery(brewery)))
-)
+// export const updateBrewery = (brewery) => dispatch => (
+//     BreweryApiUtil.updateBrewery(brewery).then(brewery => dispatch(receiveBrewery(brewery)))
+// )
 
 const receiveAllBreweries = (breweries) => ({
     type: RECEIVE_ALL_BREWERIES,
-    breweries
+    breweries,
 })
 
 const receiveBrewery = (brewery) => ({
     type: RECEIVE_BREWERY,
-    brewery
+    brewery,
 })

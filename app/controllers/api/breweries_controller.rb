@@ -1,15 +1,16 @@
 class Api::BreweriesController < ApplicationController
     def index
-        @breweries = Brewery.all
+        @breweries = Brewery.all.includes(:beverages)
+        render :index
     end
 
     def show
-        @brewery = Brewery.includes(:beverages).find(params[:id])
+        @brewery = Brewery.with_attached_img.includes(:beverages).find(params[:id])
+        render :show
     end
 
     def create
         @brewery = Brewery.new(brewery_params)
-        @beverages = @brewery.beverages
 
         if @brewery.save!
             render :show

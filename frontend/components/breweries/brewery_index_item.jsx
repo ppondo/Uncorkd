@@ -20,14 +20,15 @@ const BreweryIndexItem = props => (
             <div className='brewery-stats'>
                 <div className='stat-box'>
                     <div className='num-beers'>
-                        <Link className='num-beers-link' to='brewery/:breweryId/beverages'> # Beers </Link>
+                        <Link className='num-beers-link' to='brewery/:breweryId/beverages'> {props.brewery.beverages.length} Beers </Link>
                     </div> 
                     <div className='num-ratings'>
                         4 ratings{/* this will have brewery.checkins.length (thru assoc.) */}
                     </div> 
                 </div>
                 <div className='avg-rating'>
-                    3.98{/* this will have the sum of all ratings divided by length of checkin assoc.*/}
+                    <i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i>
+                    <div>(3.98)</div>
                 </div> 
             </div>
         </div>
