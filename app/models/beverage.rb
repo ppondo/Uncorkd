@@ -15,4 +15,5 @@ class Beverage < ApplicationRecord
     validates :name, :style, :ABV, :description, :brewery_id, presence: true
 
     belongs_to :Brewery
+    has_one_attached :img
 end

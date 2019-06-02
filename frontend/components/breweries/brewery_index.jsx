@@ -20,7 +20,12 @@ class BreweryIndex extends React.Component {
 
         return (
             <div className='brewery-index-container'>
-                {BrewIndexItems}
+                <div className='brewery-index'>
+                    {BrewIndexItems}
+                </div>
+                <div className='brewery-sidebar'>
+                    <div className='sidebar-title'>Global Top Beers</div>
+                </div>
             </div>
         )
     }

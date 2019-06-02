@@ -16,4 +16,5 @@ class Brewery < ApplicationRecord
     validates :name, uniqueness: true
 
     has_many :beverages
+    has_one_attached :img
 end

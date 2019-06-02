@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default ({currentUser, logOut}) => {
     const display = currentUser ? (
-        <div className= 'nav-bar'>
+        <header className= 'nav-bar'>
             <div  className='left-nav'>
                 <div className='nav-logo'>
                     <div className='nav-logo-title'>UNCORKD</div>
@@ -22,7 +22,7 @@ export default ({currentUser, logOut}) => {
             <div className='right-nav'>
                 <button className='logout-button'onClick={logOut} >Logout</button>
             </div>
-        </div>
+        </header>
     ):(
         <>
             <div className='splash-background'>
