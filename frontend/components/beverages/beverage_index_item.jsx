@@ -12,9 +12,6 @@ const BeverageIndexItem = (props) => {
     let year = dateObj.getUTCFullYear();
 
     const date = month + "/" + day + "/" + year;
-    let img;
-    if(props.beer.imgUrl) {
-    }
     
     return (
         <>

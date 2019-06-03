@@ -26,7 +26,7 @@ class BreweryShow extends React.Component {
 
         const date = month + "/" + day + "/" + year;
 
-        debugger
+        // debugger
         return (
             <div className='brewery-show'>
                 <div className='show-content'>

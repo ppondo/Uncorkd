@@ -6,14 +6,12 @@ import { merge } from 'lodash';
 
 const BeveragesReducer = (oldState = {}, action) => {
     Object.freeze(oldState);
-    let newState;
 
     switch(action.type) {
         case RECEIVE_ALL_BEVERAGES:
             return merge({}, oldState, action.beverages)
         case RECEIVE_BEVERAGE:
-            newState = { [action.beverage.id]: action.beverage };
-            return merge({}, oldState, newState);
+            return merge({}, oldState, { [action.beverage.id]: action.beverage });
         default:
             return oldState;
     }
