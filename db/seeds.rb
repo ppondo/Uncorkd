@@ -1,3 +1,4 @@
+require 'open-uri'
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -41,6 +42,7 @@ demo_user = User.create!(username: 'demo_user',
 brewery1 = Brewery.create!(name: 'Guinness',
                            location: 'St. James Gate, Dublin Ireland',
                            description: 'The Guinness® brand enjoys a global reputation as a uniquely authentic beer and the best-selling stout in the world. ')
+
 brewery2 = Brewery.create!(name: 'Fat Orange Cat Brew Co.',
                            location: 'East Hampton, CT United States',
                            description: 'Connecticut based brewery specializing in craft IPAs. ')
