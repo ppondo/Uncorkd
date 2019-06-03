@@ -14,7 +14,6 @@ class BeerBreweryShow extends React.Component {
         if (prevProps.match.params.breweryId !== this.props.match.params.breweryId) {
             this.props.fetchBrewery(this.props.match.params.breweryId);
         }
-        this.props.fetchBeverages();
     }
 
 
@@ -41,6 +40,10 @@ class BeerBreweryShow extends React.Component {
                 />
             )
         })
+
+        if (beerItems === undefined) {
+            return null
+        }
 
         let dateObj = new Date(this.props.brewery.created_at);
         let month = dateObj.getUTCMonth() + 1; //months from 1-12
@@ -114,6 +117,9 @@ class BeerBreweryShow extends React.Component {
                                 <div className='box4'></div>
                             </div>
                         </div>
+                    </div>
+                    <div className='beer-list-box'>
+                        <div className='beer-list'>Beer List</div>
                     </div>
                     <div className='brewery-beers'>
                         {beerItems}

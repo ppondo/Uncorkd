@@ -21,6 +21,7 @@ class BreweryIndex extends React.Component {
         return (
             <div className='brewery-index-container'>
                 <div className='brewery-index'>
+                    <div className='brewery-index-count'>{this.props.breweries.length} Breweries</div>
                     {BrewIndexItems}
                 </div>
                 <div className='brewery-sidebar'>

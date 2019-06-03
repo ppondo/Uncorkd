@@ -14,7 +14,6 @@ class BeverageShow extends React.Component {
         if (prevProps.match.params.beverageId !== this.props.match.params.beverageId) {
             this.props.fetchBeverage(this.props.match.params.beverageId);
         }
-        this.props.fetchBreweries();
     }
 
     render() {
