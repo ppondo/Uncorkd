@@ -7,6 +7,7 @@ import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
 import BreweryIndexContainer from './breweries/brewery_index_container'
 import BreweryShowContainer from './breweries/brewery_show_container'
+import BeerBreweryShowContainer from './breweries/beer_brewery_show_container'
 
 
 const App = (props) => {
@@ -17,6 +18,7 @@ const App = (props) => {
             <Switch>
                 <ProtectedRoute exact path='/breweries' component={BreweryIndexContainer}/>
                 <ProtectedRoute exact path='/breweries/:breweryId' component={BreweryShowContainer}/>
+                <ProtectedRoute exact path='/breweries/:breweryId/beer' component={BeerBreweryShowContainer}/>
                 <AuthRoute exact path="/login" component={LoginFormContainer} />
                 <AuthRoute exact path="/signup" component={SignupFormContainer} />
                 <Route exact path="/splash" component={GreetingContainer} />

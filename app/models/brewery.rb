@@ -6,9 +6,9 @@
 #  name        :string           not null
 #  location    :string           not null
 #  description :text             not null
-#  photo       :string           not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  photo       :string
 #
 
 class Brewery < ApplicationRecord

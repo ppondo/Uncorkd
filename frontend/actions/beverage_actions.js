@@ -11,13 +11,13 @@ export const fetchBeverage = (id) => dispatch => (
     BeverageApiUtil.fetchBeverage(id).then(beverage => dispatch(receiveBeverage(beverage)))
 )
 
-export const createBeverage = (beverage) => dispatch => (
-    BeverageApiUtil.createBeverage(beverage).then(beverage => dispatch(receiveBeverage(beverage)))
-)
+// export const createBeverage = (beverage) => dispatch => (
+//     BeverageApiUtil.createBeverage(beverage).then(beverage => dispatch(receiveBeverage(beverage)))
+// )
 
-export const updateBeverage = (beverage) => dispatch => (
-    BeverageApiUtil.updateBeverage(beverage).then(beverage => dispatch(receiveBeverage(beverage)))
-)
+// export const updateBeverage = (beverage) => dispatch => (
+//     BeverageApiUtil.updateBeverage(beverage).then(beverage => dispatch(receiveBeverage(beverage)))
+// )
 
 const receiveAllBeverages = (beverages) => ({
     type: RECEIVE_ALL_BEVERAGES,

@@ -14,7 +14,7 @@ body {
 }
 
 .show-info {
-    
+    margin-bottom: 16px;
 }
 
 .show-info-basic {
@@ -225,4 +225,73 @@ body {
     width: 42px;
     height: 42px;
     background-color: #ffcc00;
+}
+
+// beer-brewery-show
+
+.brewery-beers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.1);
+    background-color: #ffffff;
+    padding: 16px;
+}
+
+.bev-info {
+    display: flex;
+    padding: 16px;
+}
+
+.bev-info-name {
+    max-width: 22vw;
+}
+
+.name-link {
+    font-size: 20.8px;
+    padding-top: 5px;
+    line-height: 1em;
+    color: #c60;
+    text-decoration: none;
+}
+
+.name-link:hover {
+    color: rgb(255, 154, 52);
+    cursor: pointer;
+}
+
+.bev-info-name > p {
+    font-size: 15px;
+    margin-bottom: 3px;
+    padding-top: 5px;
+    color: #666666;
+    font-size: 16px;
+    line-height: 1.3em;
+}
+
+.bev-info-img {
+    width: 95px;
+    height: 95px;
+    padding-right: 15px;
+}
+
+.bev-description {
+    font-size: 16px;
+    max-width: 26vw;
+    color: #888888;
+    line-height: 1.3em;
+}
+
+.bev-info-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.bev-info-ratings {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
 }

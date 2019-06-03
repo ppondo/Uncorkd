@@ -26,7 +26,7 @@ class BreweryShow extends React.Component {
 
         const date = month + "/" + day + "/" + year;
 
-        // debugger
+        debugger
         return (
             <div className='brewery-show'>
                 <div className='show-content'>
@@ -77,9 +77,8 @@ class BreweryShow extends React.Component {
                                 {/* <div className='rate2'><i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i></div> */}
                             </div>
                             <div className='show-num-ratings'>30 Ratings</div>
-                            <Link to='/users/:userId' className='show-num-beers'>{this.props.brewery.beverages.length} Beers</Link>
+                            <Link to={`/breweries/${this.props.brewery.id}/beer`} className='show-num-beers'>{this.props.brewery.beverages.length} Beers</Link>
                             <div className='show-num-ratings'>{`Added ${date}`}</div> 
-                            {/* date added ^ */}
                         </div>
                         <div className='show-info-description'>
                             <div className='desc'>{`${this.props.brewery.description}`}

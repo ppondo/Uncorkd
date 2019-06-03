@@ -3,5 +3,9 @@ json.extract! beverage, :id,
                         :style, 
                         :description, 
                         :ABV, 
-                        :photo, 
-                        :brewey_id
+                        :IBU, 
+                        :brewery_id,
+                        :created_at
+if beverage.img.attached?
+    json.imgUrl url_for(beverage.img)
+end
