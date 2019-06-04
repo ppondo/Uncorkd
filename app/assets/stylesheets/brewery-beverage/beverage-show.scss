@@ -54,3 +54,35 @@
     color: #888888;
     font-size:16px;
 }
+
+.checkin-boxes {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.checkin-box {
+    width: 52px;
+    height: 52px;
+    background-color: #ffcc00;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 2em;
+    margin: 0 5px 0 5px;
+    align-self: center;
+}
+
+.checkin-box:hover {
+    background-color:#f0c003;
+}
+
+.checkin-box > i {
+    color: white;
+}
+
+.checkin-link {
+    width: 100%;
+    height: 100%;
+}
+

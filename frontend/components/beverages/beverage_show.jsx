@@ -94,11 +94,23 @@ class BeverageShow extends React.Component {
                     <div className='show-info-description'>
                         <div className='desc'>{`${this.props.beverage.description}`}
                         </div>
-                        <div className='desc-boxes'>
-                            <div className='box1'></div>
-                            <div className='box2'></div>
-                            <div className='box3'></div>
-                            <div className='box4'></div>
+                        <div className='checkin-boxes'>
+                            <div className='checkin-dropdown'>
+                                <Link className='checkin-box' to={`/beer/${this.props.beverage.id}/checkin`}><i className="fas fa-check"></i></Link>
+                                <div className='checkin-dropdown-content'>
+                                    <ul className='checkin-dropdown-list'>
+                                        <p >Check-in this Beer</p>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div className='checkin-dropdown'>
+                                <Link className='checkin-box' to={`/beer/${this.props.beverage.id}/checkin`}><i className="fas fa-plus"></i></Link>
+                                <div className='checkin-dropdown-content2'>
+                                    <ul className='checkin-dropdown-list2'>
+                                        <p >Add To List</p>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

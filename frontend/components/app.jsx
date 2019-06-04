@@ -9,6 +9,7 @@ import BreweryIndexContainer from './breweries/brewery_index_container';
 import BreweryShowContainer from './breweries/brewery_show_container';
 import BeerBreweryShowContainer from './breweries/beer_brewery_show_container';
 import BeverageShowContainer from './beverages/beverage_show_container';
+import CheckinFormContainer from './checkins/checkin_form_container'
 
 
 const App = (props) => {
@@ -19,6 +20,7 @@ const App = (props) => {
             <Switch>
                 <ProtectedRoute exact path='/home' component={BreweryIndexContainer}/>
                 <ProtectedRoute exact path='/breweries' component={BreweryIndexContainer}/>
+                <ProtectedRoute exact path='/beer/:beverageid/checkin' component={CheckinFormContainer}/>
                 <ProtectedRoute exact path='/breweries/:breweryId' component={BreweryShowContainer}/>
                 <ProtectedRoute exact path='/breweries/:breweryId/beer' component={BeerBreweryShowContainer}/>
                 <ProtectedRoute exact path='/b/beverage/:beverageId' component={BeverageShowContainer}/>

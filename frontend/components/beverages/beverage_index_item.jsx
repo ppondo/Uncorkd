@@ -16,14 +16,24 @@ const BeverageIndexItem = (props) => {
     return (
         <>
             <div className='bev-info'>
-                <img className='bev-info-img' src={props.beer.imgUrl} alt="" />
-                <div className='bev-info-text'>
-                    <div className='bev-info-name'>
-                        <Link className='name-link' to={`/b/beverage/${props.beer.id}`}>{props.beer.name}</Link>
-                        <p>{props.beer.style}</p>
+                <div className='bev-info-box'>
+                    <img className='bev-info-img' src={props.beer.imgUrl} alt="" />
+                    <div className='bev-info-text'>
+                        <div className='bev-info-name'>
+                            <Link className='name-link' to={`/b/beverage/${props.beer.id}`}>{props.beer.name}</Link>
+                            <p>{props.beer.style}</p>
+                        </div>
+                        <div className='bev-description'>
+                            {props.beer.description}
+                        </div>
                     </div>
-                    <div className='bev-description'>
-                        {props.beer.description}
+                </div>
+                <div className='checkin-dropdown'>
+                    <Link className='checkin-box' to={`/beer/${props.beer.id}/checkin`}><i className="fas fa-check"></i></Link>
+                    <div className='checkin-dropdown-content'>
+                        <ul className='checkin-dropdown-list'>
+                            <p >Check-in this Beer</p>
+                        </ul>
                     </div>
                 </div>
             </div>
