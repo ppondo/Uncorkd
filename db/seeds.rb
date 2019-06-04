@@ -133,12 +133,10 @@ brewery13 = Brewery.create!(name: 'Firestone Walker Brewing Company',
 file14 = open('https://uncorkd-prod.s3.amazonaws.com/firestone.jpg')
 brewery13.img.attach(io: file14, filename: 'firestone.jpg')
 
-brewery14 = Brewery.create!(name: 'Allagash Brewing Company',
-                           location: 'Portland, ME United States',
-                           description: 'Founded in Portland, Maine, by Rob Tod, Allagash Brewing Company is dedicated to crafting the best Belgian-inspired beers in the world. Since 1995, Allagash has been a proud resident of Portland, and loves giving back to the community—and state—that has supported it along the way. ')
+brewery14 = Brewery.create!(name: 'Allagash Brewing Company', location: 'Portland, ME United States', description: 'Founded in Portland, Maine, by Rob Tod, Allagash Brewing Company is dedicated to crafting the best Belgian-inspired beers in the world. Since 1995, Allagash has been a proud resident of Portland, and loves giving back to the community—and state—that has supported it along the way. ')
 
 file15 = open('https://uncorkd-prod.s3.amazonaws.com/allagash.jpg')
-brewery13.img.attach(io: file15, filename: 'allagash.jpg')
+brewery14.img.attach(io: file15, filename: 'allagash.jpg')
 
 bev1 = brewery1.beverages.create!(name: 'Guinness Draught', style: 'Stout - Irish Dry', ABV: 4.2, description: 'Swirling clouds tumble as the storm begins to calm. Settle. Breathe in the moment, then break through the smooth, light head to the bittersweet reward.', IBU: 45) 
 
