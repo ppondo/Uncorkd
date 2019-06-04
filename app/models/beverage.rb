@@ -22,5 +22,20 @@ class Beverage < ApplicationRecord
     foreign_key: :brewery_id,
     class_name: :Brewery
 
+    has_many :checkins
+
     has_one_attached :img
+
+    def avg_rating(beverage)
+        sum = 0
+        beverage.checkins.each do |checkin|
+            sum += checkin.rating
+        end
+
+        return (sum / beverage.checkins.length)
+    end
+
+    def num_ratings(beverage)
+        return beverage.checkins.length
+    end
 end

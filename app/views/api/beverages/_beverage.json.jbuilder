@@ -9,3 +9,7 @@ json.extract! beverage, :id,
 if beverage.img.attached?
     json.imgUrl url_for(beverage.img)
 end
+
+json.checkins do
+    json.array! beverage.checkins, :id
+end

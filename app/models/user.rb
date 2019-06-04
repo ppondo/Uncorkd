@@ -24,6 +24,7 @@ class User < ApplicationRecord
     validates :username, :email, uniqueness: true
 
     has_one_attached :img
+    has_many :checkins
 
     attr_reader :password
 

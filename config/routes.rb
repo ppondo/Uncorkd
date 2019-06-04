@@ -6,5 +6,6 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy]
     resources :beverages, except: [:new, :edit, :destroy]
     resources :breweries, except: [:new, :edit, :destroy]
+    resources :checkins, except: [:new, :edit]
   end
 end

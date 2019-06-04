@@ -16,5 +16,22 @@ class Brewery < ApplicationRecord
     validates :name, uniqueness: true
 
     has_many :beverages
+    has_many :checkins,
+        through: :beverages,
+        source: :checkins
+
     has_one_attached :img
+
+    def avg_rating(brewery)
+        sum = 0.0
+        brewery.checkins.each do |checkin|
+            sum += checkin.rating
+        end
+
+        return (sum / brewery.checkins.length)
+    end
+
+    def num_ratings(brewery)
+        return brewery.checkins.length
+    end
 end

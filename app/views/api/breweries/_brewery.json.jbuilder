@@ -6,6 +6,11 @@ json.extract! brewery, :id,
 json.beverages do
     json.array! brewery.beverages, :id
 end
+
+json.checkins do
+    json.array! brewery.checkins, :id
+end
+
 if brewery.img.attached?
     json.imgUrl url_for(brewery.img)
 end
