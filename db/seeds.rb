@@ -344,7 +344,7 @@ bev44 = brewery8.beverages.create!(name: 'PC Pils', style: 'Pilsner - Other', AB
 file59= open('https://uncorkd-prod.s3.amazonaws.com/pc_pils.jpg')
 bev44.img.attach(io: file59, filename: 'pc_pils.jpg')
 
-bev45 = brewery9.beverages.create!(name: 'Stone Smoked Porter', style: 'Smoked Beer', ABV: 5,9, description: 'Rich, full bodied and robust. Smooth, with chocolate and coffee-like flavors balanced by the subtle \smoky\" character of just the right amount of peat-smoked specialty malt.', IBU: 53)
+bev45 = brewery9.beverages.create!(name: 'Stone Smoked Porter', style: 'Smoked Beer', ABV: 5.9, description: "Rich, full bodied and robust. Smooth, with chocolate and coffee-like flavors balanced by the subtle 'smoky' character of just the right amount of peat-smoked specialty malt.", IBU: 53)
 file60= open('https://uncorkd-prod.s3.amazonaws.com/stone_smoked_porter.jpg')
 bev45.img.attach(io: file60, filename: 'stone_smoked_porter.jpg')
 
