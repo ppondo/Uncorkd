@@ -82,7 +82,7 @@ class BeverageShow extends React.Component {
                         </div>
                     </div>
                     <div className='bev-info-ratings'>
-                        <div className='show-num-ratings'>{this.props.beverage.ABV}%</div>
+                        <div className='show-num-ratings'>{this.props.beverage.ABV}% ABV</div>
                         <div className='show-num-ratings'>{this.props.beverage.IBU} IBU</div>
                         <div className='show-avg-rating'>
                             <i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i>

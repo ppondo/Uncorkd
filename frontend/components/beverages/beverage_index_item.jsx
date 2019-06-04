@@ -28,7 +28,7 @@ const BeverageIndexItem = (props) => {
                 </div>
             </div>
             <div className='bev-info-ratings'>
-                <div className='show-num-ratings'>{props.beer.ABV}%</div>
+                <div className='show-num-ratings'>{props.beer.ABV}% ABV</div>
                 <div className='show-num-ratings'>{props.beer.IBU} IBU</div>
                 <div className='show-avg-rating'>
                     <i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i>
