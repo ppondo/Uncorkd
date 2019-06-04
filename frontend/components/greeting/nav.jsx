@@ -21,6 +21,16 @@ export default ({currentUser, logOut}) => {
                     </div>
                 </div>
                 <div className='right-nav'>
+                    <div className='dropdown'>
+                        <img className='nav-avatar'src={currentUser.imgUrl} alt=""/>
+                        <div className='dropdown-content'>
+                            <ul className='dropdown-list'>
+                                <Link className='dropdown-link' to='/home'>Recent Activity</Link>
+                                <Link className='dropdown-link' to='/users/:userId'>My Profile</Link>
+                                <div onClick={logOut}>Logout</div>
+                            </ul>
+                        </div>
+                    </div>
                     <button className='logout-button' onClick={logOut} >Logout</button>
                 </div>
             </div>

@@ -17,6 +17,7 @@ const App = (props) => {
         <>
             <Route path="/" component={NavContainer} />
             <Switch>
+                <ProtectedRoute exact path='/home' component={BreweryIndexContainer}/>
                 <ProtectedRoute exact path='/breweries' component={BreweryIndexContainer}/>
                 <ProtectedRoute exact path='/breweries/:breweryId' component={BreweryShowContainer}/>
                 <ProtectedRoute exact path='/breweries/:breweryId/beer' component={BeerBreweryShowContainer}/>

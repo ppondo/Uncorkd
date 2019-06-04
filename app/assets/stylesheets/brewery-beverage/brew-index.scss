@@ -14,6 +14,7 @@ body {
 .brewery-box {
     display: flex;
     align-items: center;
+    padding-bottom: 5px; 
     // border-bottom: 1px solid #e5e5e5;
 }
 
@@ -35,8 +36,8 @@ body {
     margin-right: 15px;
     margin-left: 5px;
     padding: 0 24px 24px;
-    min-width: 44.5vw;
-    max-width: 44.5vw;
+    min-width: 47vw;
+    max-width: 47vw;
 }
 
 .brewery-sidebar {
