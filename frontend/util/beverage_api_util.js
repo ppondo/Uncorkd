@@ -1,7 +1,8 @@
-export const fetchBeverages = () => (
+export const fetchBeverages = (filterObj) => (
     $.ajax ({
         method: 'get',
-        url: 'api/beverages'
+        url: 'api/beverages',
+        data: filterObj
     })
 )
 

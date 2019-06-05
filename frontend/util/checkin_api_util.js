@@ -1,9 +1,13 @@
-export const fetchCheckins = () => (
-    $.ajax({
-        method: 'get',
-        url: 'api/checkins'
-    })
-)
+export const fetchCheckins = (filterObj) => {
+    // debugger
+    return (
+        $.ajax({
+            method: 'get',
+            url: 'api/checkins',
+            data: filterObj
+        })
+    )
+}
 
 export const fetchCheckin = (id) => (
     $.ajax({

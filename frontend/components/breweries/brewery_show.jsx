@@ -1,10 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import CheckinFeedItem from '../checkins/checkin_feed_item'
 
 class BreweryShow extends React.Component {
 
+    constructor(props) {
+        super(props)
+        this.state = {
+            filterObj: {
+                beverage_id: null,
+                brewery_id: this.props.match.params.breweryId
+            }
+        }
+    }
+
     componentDidMount() {
         this.props.fetchBrewery(this.props.match.params.breweryId);
+        this.props.fetchCheckins(this.state.filterObj);
+        this.props.fetchBeverages(this.state.filterObj);
     }
 
     componentDidlUpdate(prevProps) {
@@ -15,6 +28,19 @@ class BreweryShow extends React.Component {
     
 
     render() {
+        // debugger
+        const CheckinFeedItems = this.props.checkins.map(checkin => {
+            return (
+                <CheckinFeedItem
+                    key={checkin.id}
+                    checkin={checkin}
+                    checkinUser={this.props.users[checkin.user_id]}
+                    checkinBeverage={this.props.beverages[checkin.beverage_id]}
+                    checkinBrewery={this.props.brewery}
+                />
+            )
+        })
+
         if (this.props.brewery === undefined) {
             return null
         }
@@ -27,8 +53,8 @@ class BreweryShow extends React.Component {
         }
 
 
-        const unique = (beer, index, self) => {
-            return self.indexOf(beer) === index;
+        const unique = (brewery, index, self) => {
+            return self.indexOf(brewery) === index;
         }
 
         let youCheckins = [];
@@ -116,11 +142,17 @@ class BreweryShow extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <div className='brewery-checkins'>
-                    {/* brewery.checkins go here */}
+                    <div className='checkin-index-container'>
+                        <div className='checkin-index'>
+                            <div className='checkin-index-title'>Recent Activity</div>
+                            {CheckinFeedItems.reverse()}
+                        </div>
+                        {/* <div className='brewery-sidebar'>
+                            <div className='sidebar-title'>Global Top Beers</div>
+                        </div> */}
                     </div>
                 </div>
-                <div className='show-sidebar'>
+                <div className='brew-show-sidebar'>
                 </div>
             </div>
         );

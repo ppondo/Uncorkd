@@ -50,7 +50,7 @@ class CheckinForm extends React.Component {
         if (imgFile) {
             formData.append('checkin[img]', imgFile);
         }
-        debugger
+        // debugger
         this.props.action(formData).then(() => this.props.history.push('/home'))
     }
 

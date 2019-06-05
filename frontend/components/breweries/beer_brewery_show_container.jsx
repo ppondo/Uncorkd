@@ -11,7 +11,7 @@ const msp = (state, ownProps) => ({
 
 const mdp = dispatch => ({
     fetchBrewery: (id) => dispatch(fetchBrewery(id)),
-    fetchBeverages: () => dispatch(fetchBeverages())
+    fetchBeverages: (filterObj) => dispatch(fetchBeverages(filterObj))
 })
 
 export default connect(msp, mdp)(BeerBreweryShow);

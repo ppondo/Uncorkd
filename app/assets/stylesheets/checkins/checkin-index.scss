@@ -1,0 +1,145 @@
+body {
+    font-family: 'ProximaNova', Helvetica, sans-serif;
+}
+
+.checkin-index-title {
+    font-size: 1.4em;
+    font-weight: 500;
+    padding-top: 24px;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.checkin-index-content {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #e5e5e5;
+    margin-top: 20px;
+    max-width: 665px;
+}
+
+.checkin-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.checkin-text-body {
+    margin: 0 0 12px 0;
+    font-size: 19.3px;
+    font-weight: 350;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    padding: 12px 8px 8px 8px;
+    width: 95%
+}
+
+.checkin-text-body::before {
+}
+
+.checkin-avg-rating {
+    margin: 8px 5px 8px 0;
+    padding-top: 10px;
+}
+
+.checkin-avg-rating > i {
+    padding-left: 3px;
+    color: #acacac;
+}
+
+.checkin-avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 26px;
+    margin-right: 6px;
+}
+
+.checkin-avatar-user {
+    width: 52px;
+    height: 52px;
+    border-radius: 26px;
+    overflow: hidden;
+}
+
+.checkin-beverage-img {
+    min-width: 42px;
+    max-width: 42px;
+    min-height: 42px;
+    max-height: 42px;
+}
+
+.checkin-text {
+    font-size: 18px;
+    margin-bottom: 10px;
+    width: 90%;
+    line-height: 1.3em;
+}
+
+.rating-box {
+    width: 95%; 
+    margin-top: 10px;
+}
+
+.checkin-link {
+    text-decoration: none;
+    color: #c60;
+}
+
+.checkin-link:hover {
+    color: rgb(255, 154, 52);
+    cursor: pointer;
+}
+
+.checkin-img{
+    width: 99%;
+    height: 220px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    margin-top: 12px;
+}
+.checkin-img > img{
+    width: 100%;
+    border: none;
+}
+
+.date-detail {
+    display: flex;
+    width: 80%;
+}
+
+.checkin-date {
+    font-size: 12px;
+    padding-right: 15px;
+    color: #999999;
+}
+
+.date-detail-item {
+    font-size: 12px;
+    text-decoration: none;
+    color: #c60;
+    padding-right: 15px;
+}
+
+.date-detail-item:hover {
+    color: rgb(255, 154, 52);
+    cursor: pointer;
+}
+
+.checkin-index-container {
+    box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.1);
+    background-color: #ffffff;
+}
+
+.checkin-index {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 0;
+    // margin-left: 5px;
+    padding-left: 24px;
+    // min-width: 44%;
+    // max-width: 44%;
+}

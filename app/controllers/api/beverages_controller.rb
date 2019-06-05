@@ -1,6 +1,11 @@
 class Api::BeveragesController < ApplicationController
     def index
-        @beverages = Beverage.all
+        if params[:brewery_id] != ""
+            brewery = Brewery.find(params[:brewery_id])
+            @beverages = brewery.beverages
+        else
+            @beverages = Beverage.all
+        end
         render :index
     end
 

@@ -1,6 +1,16 @@
 class Api::CheckinsController < ApplicationController
     def index
-        @checkins = checkins.all.includes(:beverage, :user, :brewery)
+        # debugger
+        if params[:brewery_id] != ""
+            brewery = Brewery.find(params[:brewery_id])
+            @checkins = brewery.checkins.includes(:beverage, :user, :brewery)
+        elsif params[:beverage_id] != ""
+            @checkins = Checkin.where(beverage_id: params[:beverage_id]).
+                                includes(:beverage, :user, :brewery)
+        else
+            @checkins = Checkin.all.includes(:beverage, :user, :brewery)
+        end
+
         render :index
     end
 

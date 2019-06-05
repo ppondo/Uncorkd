@@ -3,8 +3,8 @@ import * as BeverageApiUtil from '../util/beverage_api_util';
 export const RECEIVE_ALL_BEVERAGES = 'RECEIVE_ALL_BEVERAGES';
 export const RECEIVE_BEVERAGE = 'RECEIVE_BEVERAGE';
 
-export const fetchBeverages = () => dispatch => (
-    BeverageApiUtil.fetchBeverages().then(beverages => dispatch(receiveAllBeverages(beverages)))
+export const fetchBeverages = (filterObj) => dispatch => (
+    BeverageApiUtil.fetchBeverages(filterObj).then(beverages => dispatch(receiveAllBeverages(beverages)))
 )
 
 export const fetchBeverage = (id) => dispatch => (

@@ -4,9 +4,19 @@ import BeverageIndexItem from '../beverages/beverage_index_item'
 
 class BeerBreweryShow extends React.Component {
 
+    constructor(props) {
+        super(props)
+        this.state = {
+            filterObj: {
+                beverage_id: null,
+                brewery_id: this.props.match.params.breweryId
+            }
+        }
+    }
+
     componentDidMount() {
         this.props.fetchBrewery(this.props.match.params.breweryId);
-        this.props.fetchBeverages();
+        this.props.fetchBeverages(this.state.filterObj);
         // debugger
     }
 
