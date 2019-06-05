@@ -7,7 +7,7 @@ const msp = (state, ownProps) => {
     const currentUserId = state.session.id
     const bevId = ownProps.match.params.beverageId;
     const checkin = {
-        rating: null, 
+        rating: 0, 
         body: '', 
         location: '',
         user_id: currentUserId,

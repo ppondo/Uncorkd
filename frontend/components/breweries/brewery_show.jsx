@@ -19,6 +19,31 @@ class BreweryShow extends React.Component {
             return null
         }
 
+        let avgRate;
+        if (this.props.brewery.avgRating <= 0) {
+            avgRate = 0;
+        } else {
+            avgRate = this.props.brewery.avgRating.toFixed(2);
+        }
+
+
+        const unique = (beer, index, self) => {
+            return self.indexOf(beer) === index;
+        }
+
+        let youCheckins = [];
+        this.props.brewery.userCheckins.forEach(checkin => {
+            if (this.props.currentUserId === checkin.user_id) {
+                youCheckins.push(checkin.user_id)
+            }
+        });
+
+        const userCheckins = this.props.brewery.userCheckins.map(ch => {
+            return (
+                ch.user_id
+            )
+        })
+
         let dateObj = new Date(this.props.brewery.created_at);
         let month = dateObj.getUTCMonth() + 1; //months from 1-12
         let day = dateObj.getUTCDate();
@@ -43,28 +68,28 @@ class BreweryShow extends React.Component {
                                 <div className='flex-box1'>
                                     <div className='show-stat1'>
                                         <span className='stat'>TOTAL</span>
-                                        <span className='count'> 20
-                                            {/* this.props.brewery.checkins.length */}
+                                        <span className='count'>
+                                            {this.props.brewery.checkins.length}
                                         </span>
                                     </div>
                                     <div className='show-stat'>
                                         <span className='stat'>UNIQUE</span>
-                                        <span className='count'> 20
-                                            {/* this.props.brewery.checkins.length */}
+                                        <span className='count'>
+                                            {userCheckins.filter(unique).length} 
                                         </span>
                                     </div>
                                 </div>
                                 <div className='flex-box'>
                                     <div className='show-stat1'> 
                                         <span className='stat'>MONTHLY</span>
-                                        <span className='count'>20
-                                            {/* this.props.brewery.checkins.length */}
+                                        <span className='count'>
+                                            {this.props.brewery.checkins.length}
                                         </span>
                                     </div>
                                     <div className='show-stat'>
                                         <span className='stat'>YOU</span>
-                                        <Link to ='users/:userId'className='user-count'>20
-                                            {/* this.props.brewery.checkins.length */}
+                                        <Link to ='users/:userId'className='user-count'>
+                                            {youCheckins.length}
                                         </Link>
                                     </div>
                                 </div>
@@ -73,10 +98,10 @@ class BreweryShow extends React.Component {
                         <div className='show-info-ratings'>
                             <div className='show-avg-rating'>
                                 <i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i>
-                                <div> (3.97)</div>
+                                <div>({avgRate})</div>
                                 {/* <div className='rate2'><i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i></div> */}
                             </div>
-                            <div className='show-num-ratings'>30 Ratings</div>
+                            <div className='show-num-ratings'>{this.props.brewery.checkins.length} Ratings</div>
                             <Link to={`/breweries/${this.props.brewery.id}/beer`} className='show-num-beers'>{this.props.brewery.beverages.length} Beers</Link>
                             <div className='show-num-ratings'>{`Added ${date}`}</div> 
                         </div>

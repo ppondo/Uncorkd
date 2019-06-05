@@ -5,7 +5,8 @@ import BeverageShow from './beverage_show';
 
 const msp = (state, ownProps) => ({
     beverage: state.entities.beverages[ownProps.match.params.beverageId],
-    breweries: state.entities.breweries
+    breweries: state.entities.breweries,
+    currentUserId: state.session.id
 });
 
 const mdp = dispatch => ({

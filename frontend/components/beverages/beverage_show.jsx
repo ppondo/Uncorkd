@@ -17,10 +17,35 @@ class BeverageShow extends React.Component {
     }
 
     render() {
-        // debugger
+
         if (this.props.beverage === undefined || this.props.breweries === undefined) {
             return null;
         }
+
+        let avgRate;
+        if (this.props.beverage.avgRating <= 0) {
+            avgRate = 0;
+        } else {
+            avgRate = this.props.beverage.avgRating.toFixed(2);
+        }
+
+        const unique = (beer, index, self) => {
+            return self.indexOf(beer) === index;
+        }
+
+        let currentUserCheckins = [];
+        this.props.beverage.userCheckins.forEach(checkin => {
+            if(this.props.currentUserId === checkin.user_id) {
+                currentUserCheckins.push(checkin.user_id)
+            }
+        });
+        const youCheckins = currentUserCheckins;
+
+        const userCheckins = this.props.beverage.userCheckins.map(ch => {
+            return (
+                ch.user_id
+            )
+        })
         
         const brew = this.props.breweries[this.props.beverage.brewery_id];
 
@@ -54,28 +79,28 @@ class BeverageShow extends React.Component {
                             <div className='flex-box1'>
                                 <div className='show-stat1'>
                                     <span className='stat'>TOTAL</span>
-                                    <span className='count'> 20
-                                                {/* this.props.beverage.checkins.length */}
+                                    <span className='count'>
+                                        {this.props.beverage.checkins.length}
                                     </span>
                                 </div>
                                 <div className='show-stat'>
                                     <span className='stat'>UNIQUE</span>
-                                    <span className='count'> 20
-                                                {/* this.props.beverage.checkins.length */}
+                                    <span className='count'>
+                                        {userCheckins.filter(unique).length}  
                                     </span>
                                 </div>
                             </div>
                             <div className='flex-box'>
                                 <div className='show-stat1'>
                                     <span className='stat'>MONTHLY</span>
-                                    <span className='count'>20
-                                                {/* this.props.beverage.checkins.length */}
+                                    <span className='count'>
+                                        {this.props.beverage.checkins.length} 
                                     </span>
                                 </div>
                                 <div className='show-stat'>
                                     <span className='stat'>YOU</span>
-                                    <Link to='users/:userId' className='user-count'>20
-                                                {/* this.props.beverage.checkins.length */}
+                                    <Link to='users/:userId' className='user-count'>
+                                        {youCheckins.length} 
                                     </Link>
                                 </div>
                             </div>
@@ -86,9 +111,9 @@ class BeverageShow extends React.Component {
                         <div className='show-num-ratings'>{this.props.beverage.IBU} IBU</div>
                         <div className='show-avg-rating'>
                             <i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i>
-                            <div> (3.97)</div>
+                            <div>({avgRate})</div>
                         </div>
-                        <div className='show-num-ratings'>30 Ratings</div>
+                        <div className='show-num-ratings'>{this.props.beverage.checkins.length} Ratings</div>
                         <div className='show-date'>{`Added ${date}`}</div>
                     </div>
                     <div className='show-info-description'>

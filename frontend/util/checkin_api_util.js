@@ -12,15 +12,19 @@ export const fetchCheckin = (id) => (
     })
 )
 
-export const createCheckin = (checkin) => (
-    $.ajax({
-        method: 'post',
-        url: 'api/checkins',
-        data: { checkin },
-        contentType: false,
-        processData: false
-    })
-)
+export const createCheckin = (checkin) => {
+// debugger
+    return (
+        $.ajax({
+            method: 'post',
+            url: 'api/checkins',
+            data: checkin,
+            contentType: false,
+            processData: false
+        })
+    )
+}
+
 
 export const deleteCheckin = (id) => {
     return $.ajax({

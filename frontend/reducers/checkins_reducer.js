@@ -11,8 +11,10 @@ const CheckinsReducer = (oldState = {}, action) => {
 
     switch(action.type) {
         case RECEIVE_ALL_CHECKINS:
+            // debugger
             return merge({}, action.checkins)
         case RECEIVE_CHECKIN:
+            // debugger
             return merge({}, oldState, { [action.checkin.id]: action.checkin })
         case DELETE_CHECKIN:
             let newState = merge({}, oldState);

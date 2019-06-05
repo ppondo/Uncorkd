@@ -3,7 +3,8 @@ import { fetchBrewery } from '../../actions/brewery_actions'
 import BreweryShow from './brewery_show'
 
 const msp = (state, ownProps) => ({
-    brewery: state.entities.breweries[ownProps.match.params.breweryId]
+    brewery: state.entities.breweries[ownProps.match.params.breweryId],
+    currentUserId: state.session.id
 });
 
 const mdp = dispatch => ({

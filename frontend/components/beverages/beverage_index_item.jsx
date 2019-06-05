@@ -12,6 +12,14 @@ const BeverageIndexItem = (props) => {
     let year = dateObj.getUTCFullYear();
 
     const date = month + "/" + day + "/" + year;
+
+    let avgRate;
+    if (props.beer.avgRating <= 0) {
+        avgRate = 0;
+    } else {
+        avgRate = props.beer.avgRating.toFixed(2);
+    }
+
     
     return (
         <>
@@ -42,9 +50,9 @@ const BeverageIndexItem = (props) => {
                 <div className='show-num-ratings'>{props.beer.IBU} IBU</div>
                 <div className='show-avg-rating'>
                     <i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i>
-                    <div> (3.97)</div>
+                    <div>({avgRate})</div>
                 </div>
-                <div className='show-num-ratings'>30 Ratings</div>
+                <div className='show-num-ratings'>{props.beer.checkins.length} Ratings</div>
                 <div className='show-num-ratings'>{`Added ${date}`}</div>
             </div>
         </>

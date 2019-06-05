@@ -1,0 +1,210 @@
+body {
+    font-family: 'ProximaNova', Helvetica, sans-serif;
+}
+
+textarea {
+  resize: none;
+}
+
+.checkin-container {
+   margin-top: 300px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.checkin-form {
+    background-color: white;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.4);
+    position: absolute;
+}
+
+.checkin-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkin-form-title {
+    padding: 10px;
+    background-color: #222
+}
+
+.checkin-form-title > p {
+    font-size: 17.6px;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.row1 {
+    display: flex;
+     padding: 16px;
+}
+
+.row2 {
+    display: flex;
+    padding: 16px;
+    align-items: center;
+}
+
+.slide-container {
+   padding-bottom: 10px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: linear-gradient(#747474, #959595);
+    border-radius: 4px;
+    height: 8px;
+    width: 240px;
+    
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #edb500;
+    height: 32px;
+    width: 32px;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.space-maker {
+    width: 20px;
+    height: 37px;
+    border-right: 1px solid #d6d6d6
+}
+
+.rating-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 4px;
+    padding: 2px;
+    margin-left: 15px;
+    width: 52px;
+}
+.rating-display-num::before {
+    right: 224px;
+    border: solid;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    // background-color: rgba(0,0,0,0.4);
+    border-color: transparent;
+    border-right-color: rgba(0,0,0,0.4);
+    border-width: 10px;
+    top: 193px;
+    margin-top: -10px;
+}
+
+.rating-display-stars {
+    font-size: 11px;
+    color: white;
+}
+
+.rating-display-num {
+    font-size: 22px;
+    color: white;
+}
+
+.row3 {
+    display: flex;
+    padding: 16px;
+    justify-content: space-between;
+}
+
+.checkin-location {
+    width: 64%;
+    background-color: #eee;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+    padding-left: 6px;
+}
+
+.checkin-location-box {
+    width: 64%;
+    background-color: #eee;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 8px;
+}
+
+.checkin-location-box > i {
+    font-size: 15px;
+    color: #666666
+}
+
+.checkin-location::placeholder {
+    color: #c60;
+}
+
+.checkin-button {
+    background-color: #ffcc00;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 32px;
+    font-size: 18px;
+}
+
+.checkin-button:hover {
+    background-color: #ffcc00;
+    cursor: pointer;
+}
+
+.checkin-body {
+    width: 375px;
+    height: 80px;
+    border: 1px solid #d6d6d6;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.checkin-body::placeholder {
+    font-size: 16px;
+}
+
+.row1 > input {
+    height: 78px;
+    width: 76px;
+}
+
+.file-upload-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 78px;
+    width: 76px;
+    background-color: #ffcc00;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+.file-upload-button:hover {
+    cursor: pointer;
+}
+
+.file-upload-button > i {
+   color: #ffffff;
+   font-size:40px;
+}
+
+#file-button {
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+}

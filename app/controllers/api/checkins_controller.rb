@@ -12,9 +12,11 @@ class Api::CheckinsController < ApplicationController
     end
 
     def create
-        @checkin = current_user.checkins.create(checkin_params)
-        @beverage = Beverage.find(params[:beverage_id])
-        
+        # debugger
+        @beverage = Beverage.find(params[:checkin][:beverage_id])
+        @checkin = @beverage.checkins.new(checkin_params)
+        @checkin.user_id = current_user.id
+        # debugger
         if @checkin.save!
             render :show
         else
@@ -29,7 +31,7 @@ class Api::CheckinsController < ApplicationController
 
     private
         def checkin_params
-            params.require(:checkin).permit(:body, :rating, :location, :beverage_id, :user_id)
+            # debugger
+            params.require(:checkin).permit(:body, :rating, :location, :beverage_id, :user_id, :img)
         end
-end
 end

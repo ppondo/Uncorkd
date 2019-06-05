@@ -14,3 +14,9 @@ end
 if brewery.img.attached?
     json.imgUrl url_for(brewery.img)
 end
+
+json.userCheckins do
+    json.array! brewery.checkins, :user_id
+end
+
+json.avgRating Brewery.avg_rating(brewery)

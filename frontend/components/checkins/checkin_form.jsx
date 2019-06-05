@@ -5,6 +5,7 @@ class CheckinForm extends React.Component {
         super(props)
         this.state = this.props.checkin
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleImgFile = this.handleImgFile.bind(this);
     }
 
     update(field) {
@@ -17,8 +18,8 @@ class CheckinForm extends React.Component {
         const reader = new FileReader();
         const file = e.currentTarget.files[0]
         reader.onloadend = () =>
-            this.setState({img: reader.result, imageFile: file});
-        
+            this.setState({imgUrl: reader.result, imgFile: file});
+        debugger
         if (file) {
             reader.readAsDataURL(file);
         } else {
@@ -28,7 +29,16 @@ class CheckinForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        const { body, rating, location, user_id, beverage_id, img } = this.state;
+        const { 
+            body, 
+            rating, 
+            location, 
+            user_id, 
+            beverage_id, 
+            imgFile, 
+            imgUrl 
+        } = this.state;
+
         const formData = new FormData();
 
         formData.append('checkin[body]', body);
@@ -37,10 +47,10 @@ class CheckinForm extends React.Component {
         formData.append('checkin[user_id]', user_id);
         formData.append('checkin[beverage_id]', beverage_id);
 
-        if (img) {
-            formData.append('checkin[img]', img);
+        if (imgFile) {
+            formData.append('checkin[img]', imgFile);
         }
-
+        debugger
         this.props.action(formData).then(() => this.props.history.push('/home'))
     }
 
@@ -49,28 +59,50 @@ class CheckinForm extends React.Component {
         return (
             <div className='checkin-container'>
                 <div className='checkin-box'>
-                    <div className='checkin-form-title'>Check-in</div>
                     <form className='checkin-form' onSubmit={this.handleSubmit}>
+                    <div className='checkin-form-title'>
+                        <p>Check-In</p>
+                    </div>
                         <div className='row1'>
                             <textarea 
                                 className='checkin-body' 
-                                cols="30" 
-                                rows="10" 
-                                placeholder='What did you think?'
+                                placeholder="What did you think?"
                                 onChange={this.update('body')}>
-                                <span className='character-count'>140</span>
                             </textarea>
-                            <input type="file"/>
+                            <label className='file-upload-button' htmlFor="file-button">
+                                <i className="fas fa-camera"></i>
+                                <input 
+                                    id='file-button'
+                                    type="file"
+                                    onChange={this.handleImgFile}/>
+                            </label>
                         </div>
                         <div className='row2'>
-                            {/* rating slider */}
+                            <div className='slide-container'>
+                                <input 
+                                    className='slider' 
+                                    type="range" 
+                                    min="0" 
+                                    max="5" 
+                                    step="0.25" 
+                                    onChange={this.update('rating')}
+                                    defaultValue="0"/>
+                            </div>
+                            <div className='rating-display'>
+                                <div className='rating-display-num'>{this.state.rating}</div>
+                                <div className='rating-display-stars'>STARS</div>
+                            </div>
+                            <div className='space-maker'></div>
                         </div>
                         <div className='row3'>
-                            <input 
-                                type="text"
-                                className='checkin-location'
-                                placeholder='Add your location'
-                                onChange={this.update('location')}/>
+                            <div className='checkin-location-box'>
+                                <i className="fas fa-map-marker-alt"></i>
+                                <input 
+                                    type="text"
+                                    className='checkin-location'
+                                    placeholder='Add your location'
+                                    onChange={this.update('location')}/>
+                            </div>
                             <input className='checkin-button' type="submit" value='Confirm'/>
                         </div>
                     </form>
