@@ -69,23 +69,14 @@ export default ({currentUser, logOut}) => {
                 </div>
             </section>
             <div className='footer'>
-                {/* <div className='footer-nav'>
-                    <Link className='footer-link' to='/' >Home</Link>
-                    <Link className='footer-link' to='/signup' >The Pub</Link>
-                    <Link className='footer-link' to='/signup' >Store</Link>
-                    <Link className='footer-link' to='/signup' >Breweries</Link>
-                    <Link className='footer-link' to='/signup' >Blog</Link>
-                    <Link className='footer-link' to='/signup' >Support</Link>
-                    <Link className='footer-link' to='/signup' >Careers</Link>
-                    <Link className='footer-link' to='/signup' >API</Link>
-                    <Link className='footer-link' to='/signup' >Terms</Link>
-                    <Link className='footer-link' to='/signup' >Privacy</Link>
-                </div> */}
+                <div className='footer-nav'>
+                    <a className='footer-link' href='https://github.com/ppondo/Uncorkd'>Github</a>
+                    <a className='footer-link' href='www.linkedin.com/in/patrickpondo' >LinkedIn</a>
+                    <a className='footer-link' href='' >Personal Site</a>
+                </div>
                 <div>
                     <p className='footer-tag'>Uncorkd 2019</p>
                 </div>
-            </div>
-            <div className='footer-icons'>
             </div>
         </>
     ) : (

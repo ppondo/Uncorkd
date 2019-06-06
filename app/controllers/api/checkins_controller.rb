@@ -7,6 +7,9 @@ class Api::CheckinsController < ApplicationController
         elsif params[:beverage_id] != ""
             @checkins = Checkin.where(beverage_id: params[:beverage_id]).
                                 includes(:beverage, :user, :brewery)
+        elsif params[:user_id] != ""
+            @checkins = Checkin.where(user_id: params[:user_id]).
+                                includes(:beverage, :brewery)
         else
             @checkins = Checkin.all.includes(:beverage, :user, :brewery)
         end

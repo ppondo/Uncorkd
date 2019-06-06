@@ -86,3 +86,24 @@
     height: 100%;
 }
 
+.beer-brew-sidebar {
+    margin-left: 25px;
+    padding: 0 0 6px 0;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+    width: 22%;
+}
+
+.beer-brew-sidebar-item {
+    box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.1);
+    background-color: #ffffff;
+    font-size: 19.5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.beer-brew-sidebar-item > p {
+    border-bottom: 1px solid #e5e5e5;
+    font-weight: 500;
+}

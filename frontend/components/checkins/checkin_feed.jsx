@@ -9,7 +9,8 @@ class CheckinFeed extends React.Component {
         this.state = {
             filterObj: {
                 beverage_id: null,
-                brewery_id: null
+                brewery_id: null,
+                user_id: null
             }
         }
     }
@@ -46,49 +47,57 @@ class CheckinFeed extends React.Component {
                     {CheckinFeedItems.reverse()}
                 </div>
                 <div className='home-sidebar'>
-                    <div className='home-user-box'>
-                        <div className='home-user-info'>
-                            <div className='checkin-avatar'>
-                                <Link to={`/users/${this.props.currentUserId.id}`}>
-                                    <img className='checkin-avatar-user' src={this.props.users[this.props.currentUserId].imgUrl} alt="" />
-                                </Link>
-                            </div>
-                            <div className='home-user-name'>
-                                <div className='home-name'>{this.props.users[this.props.currentUserId].first_name} {this.props.users[this.props.currentUserId].last_name}</div>
-                                <div className='home-little-name'>
-                                    <i className="fas fa-user"></i>
-                                    <p>{this.props.users[this.props.currentUserId].username}</p>
+                    <div className='home-sidebar-item'>
+                        <div className='home-user-box'>
+                            <div className='home-user-info'>
+                                <div className='checkin-avatar'>
+                                    <Link to={`/users/${this.props.currentUserId}`}>
+                                        <img className='checkin-avatar-user' src={this.props.users[this.props.currentUserId].imgUrl} alt="" />
+                                    </Link>
+                                </div>
+                                <div className='home-user-name'>
+                                    <div className='home-name'>{this.props.users[this.props.currentUserId].first_name} {this.props.users[this.props.currentUserId].last_name}</div>
+                                    <div className='home-little-name'>
+                                        <i className="fas fa-user"></i>
+                                        <p>{this.props.users[this.props.currentUserId].username}</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                        <div className='home-user-stats'>
-                            <div className='home-stat-box '>
-                                <div className='home-flex-box1'>
-                                    <div className='home-show-stat1'>
-                                    <span className='home-count'>
-                                        {this.props.users[this.props.currentUserId].checkins.length}</span>
-                                        <span className='home-stat'>TOTAL</span>
-                                    </div>
-                                    <div className='home-show-stat'>
+                            <div className='home-user-stats'>
+                                <div className='home-stat-box '>
+                                    <div className='home-flex-box1'>
+                                        <div className='home-show-stat1'>
                                         <span className='home-count'>
                                             {this.props.users[this.props.currentUserId].checkins.length}</span>
-                                        <span className='home-stat'>UNIQUE</span>
+                                            <span className='home-stat'>TOTAL</span>
+                                        </div>
+                                        <div className='home-show-stat'>
+                                            <span className='home-count'>
+                                                {this.props.users[this.props.currentUserId].checkins.length}</span>
+                                            <span className='home-stat'>UNIQUE</span>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className='home-flex-box'>
-                                    <div className='home-show-stat1'>
-                                        <span className='home-count'>0</span>
-                                        <span className='home-stat'>BADGES</span>
-                                    </div>
-                                    <div className='home-show-stat'>
-                                        <span className='home-count'>0</span>
-                                        <span className='home-stat'>FRIENDS</span>
+                                    <div className='home-flex-box'>
+                                        <div className='home-show-stat1'>
+                                            <span className='home-count'>0</span>
+                                            <span className='home-stat'>BADGES</span>
+                                        </div>
+                                        <div className='home-show-stat'>
+                                            <span className='home-count'>0</span>
+                                            <span className='home-stat'>FRIENDS</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    {/* <div className='home-title'>Global Top Beers</div> */}
+                        {/* <div className='home-title'>Global Top Beers</div> */}
+                    </div>
+                    <div className='profile-sidebar-item'>
+                        <p>Top Beers</p>
+                    </div>
+                    <div className='profile-sidebar-item'>
+                        <p>Lists</p>
+                    </div>
                 </div>
             </div>
         )

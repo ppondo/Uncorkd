@@ -9,7 +9,8 @@ class BreweryShow extends React.Component {
         this.state = {
             filterObj: {
                 beverage_id: null,
-                brewery_id: this.props.match.params.breweryId
+                brewery_id: this.props.match.params.breweryId,
+                user_id: null
             }
         }
     }
@@ -114,7 +115,7 @@ class BreweryShow extends React.Component {
                                     </div>
                                     <div className='show-stat'>
                                         <span className='stat'>YOU</span>
-                                        <Link to ='users/:userId'className='user-count'>
+                                        <Link to ={`/users/${this.props.currentUserId}`}className='user-count'>
                                             {youCheckins.length}
                                         </Link>
                                     </div>
@@ -135,10 +136,10 @@ class BreweryShow extends React.Component {
                             <div className='desc'>{`${this.props.brewery.description}`}
                             </div>
                             <div className='desc-boxes'>
-                                <div className='box1'></div>
-                                <div className='box2'></div>
-                                <div className='box3'></div>
-                                <div className='box4'></div>
+                                <div className='box1'><i className="fas fa-beer"></i></div>
+                                <div className='box2'><i className="fas fa-users"></i></div>
+                                <div className='box3'><i className="fas fa-wine-bottle"></i></div>
+                                <div className='box4'><i id='thingy'className="fab fa-untappd"></i></div>
                             </div>
                         </div>
                     </div>
@@ -152,7 +153,13 @@ class BreweryShow extends React.Component {
                         </div> */}
                     </div>
                 </div>
-                <div className='brew-show-sidebar'>
+                <div className='brew-sidebar'>
+                    <div className='brew-sidebar-item'>
+                        <p>Top Beers</p>
+                    </div>
+                    <div className='brew-sidebar-item'>
+                        <p>Lists</p>
+                    </div>
                 </div>
             </div>
         );

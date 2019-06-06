@@ -107,10 +107,10 @@ i.fab.fa-untappd {
 
 .footer {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     background-color: #1e1f1d; 
-    padding: 20px
+    padding: 20px 90px 20px 90px
 }
 
 .footer-nav {

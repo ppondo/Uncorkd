@@ -9,7 +9,8 @@ class BeerBreweryShow extends React.Component {
         this.state = {
             filterObj: {
                 beverage_id: null,
-                brewery_id: this.props.match.params.breweryId
+                brewery_id: this.props.match.params.breweryId,
+                user_id: null
             }
         }
     }
@@ -146,21 +147,27 @@ class BeerBreweryShow extends React.Component {
                             <div className='desc'>{`${this.props.brewery.description}`}
                             </div>
                             <div className='desc-boxes'>
-                                <div className='box1'></div>
-                                <div className='box2'></div>
-                                <div className='box3'></div>
-                                <div className='box4'></div>
+                                <div className='box1'><i className="fas fa-beer"></i></div>
+                                <div className='box2'><i className="fas fa-users"></i></div>
+                                <div className='box3'><i className="fas fa-wine-bottle"></i></div>
+                                <div className='box4'><i id='thingy' className="fab fa-untappd"></i></div>
                             </div>
                         </div>
                     </div>
                     <div className='beer-list-box'>
                         <div className='beer-list'>Beer List</div>
-                    </div>
-                    <div className='brewery-beers'>
-                        {beerItems}
+                        <div className='brewery-beers'>
+                            {beerItems}
+                        </div>
                     </div>
                 </div>
-                <div className='show-sidebar'>
+                <div className='beer-brew-sidebar'>
+                    <div className='beer-brew-sidebar-item'>
+                        <p>Top Beers</p>
+                    </div>
+                    <div className='beer-brew-sidebar-item'>
+                        <p>Lists</p>
+                    </div>
                 </div>
             </div>
         );

@@ -9,7 +9,8 @@ class BeverageShow extends React.Component {
         this.state = {
             filterObj: {
                 beverage_id: this.props.match.params.beverageId,
-                brewery_id: null
+                brewery_id: null,
+                user_id: null
             }
         }
     }
@@ -123,7 +124,7 @@ class BeverageShow extends React.Component {
                                 </div>
                                 <div className='show-stat'>
                                     <span className='stat'>YOU</span>
-                                    <Link to='users/:userId' className='user-count'>
+                                    <Link to={`users/${this.props.currentUserId}`} className='user-count'>
                                         {youCheckins.length} 
                                     </Link>
                                 </div>
@@ -172,7 +173,13 @@ class BeverageShow extends React.Component {
                         </div> */}
                     </div>
                 </div>
-                <div className='brew-show-sidebar'>
+                <div className='brew-sidebar'>
+                    <div className='brew-sidebar-item'>
+                        <p>Top Beers</p>
+                    </div>
+                    <div className='brew-sidebar-item'>
+                        <p>Lists</p>
+                    </div>
                 </div>
             </div>
         )
