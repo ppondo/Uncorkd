@@ -26,7 +26,30 @@ textarea {
 
 .checkin-form-title {
     padding: 10px;
-    background-color: #222
+    display: flex;
+    background-color: #222;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 20px;
+}
+
+.close-checkin {
+    background-color: #222;
+    text-decoration: none;
+    border: none;
+}
+
+.close-checkin:hover {
+    cursor: pointer;
+    border: none;
+}
+
+.close-checkin > i {
+    color: #acabab;
+    font-size: 14px;
+    position: absolute;
+    right: 15px;
+    top: 12px;
 }
 
 .checkin-form-title > p {

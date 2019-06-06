@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class CheckinForm extends React.Component {
     constructor(props) {
@@ -19,15 +20,17 @@ class CheckinForm extends React.Component {
         const file = e.currentTarget.files[0]
         reader.onloadend = () =>
             this.setState({imgUrl: reader.result, imgFile: file});
-        debugger
+        // debugger
         if (file) {
             reader.readAsDataURL(file);
         } else {
             this.setState({ imgUrl: '', imgFile: null })
         }
+        
     }
 
     handleSubmit(e) {
+        document.getElementById("check").disabled = true;
         e.preventDefault();
         const { 
             body, 
@@ -59,9 +62,12 @@ class CheckinForm extends React.Component {
         return (
             <div className='checkin-container'>
                 <div className='checkin-box'>
-                    <form className='checkin-form' onSubmit={this.handleSubmit}>
+                    <form className='checkin-form' >
                     <div className='checkin-form-title'>
                         <p>Check-In</p>
+                        <Link className="close-checkin" to="/home">
+                            <i className="fas fa-times"></i>
+                        </Link>
                     </div>
                         <div className='row1'>
                             <textarea 
@@ -103,7 +109,11 @@ class CheckinForm extends React.Component {
                                     placeholder='Add your location'
                                     onChange={this.update('location')}/>
                             </div>
-                            <input className='checkin-button' type="submit" value='Confirm'/>
+                            <input className='checkin-button'
+                                    id='check' 
+                                    type="submit" 
+                                    value='Confirm'
+                                    onClick={this.handleSubmit}/>
                         </div>
                     </form>
                 </div>
