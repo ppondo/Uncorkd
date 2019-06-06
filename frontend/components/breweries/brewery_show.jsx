@@ -20,7 +20,7 @@ class BreweryShow extends React.Component {
         this.props.fetchBeverages(this.state.filterObj);
     }
 
-    componentDidlUpdate(prevProps) {
+    componentDidUpdate(prevProps) {
         if (prevProps.match.params.breweryId !== this.props.match.params.breweryId) {
             this.props.fetchBrewery(this.props.match.params.breweryId);
         }
