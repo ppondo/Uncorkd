@@ -137,7 +137,6 @@ class BeerBreweryShow extends React.Component {
                             <div className='show-avg-rating'>
                                 <i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i>
                                 <div>({avgRate})</div>
-                                {/* <div className='rate2'><i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i></div> */}
                             </div>
                             <div className='show-num-ratings'>{this.props.brewery.checkins.length} Ratings</div>
                             <div className='show-num-ratings'>{this.props.brewery.beverages.length} Beers</div>
