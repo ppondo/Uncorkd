@@ -71,7 +71,7 @@ class BeverageShow extends React.Component {
                     key={checkin.id}
                     checkin={checkin}
                     checkinUser={this.props.users[checkin.user_id]}
-                    checkinBeverage={this.props.beverage.id}
+                    checkinBeverage={this.props.beverage}
                     checkinBrewery={brew}
                 />
             )
