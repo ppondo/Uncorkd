@@ -143,3 +143,104 @@ body {
     // min-width: 44%;
     // max-width: 44%;
 }
+
+.home-user-box {
+    display: flex;
+    padding-bottom: 40px;
+}
+
+.home-sidebar {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.1);
+    background-color: #ffffff;
+    margin-left: 30px;
+    padding: 16px;
+    max-height: 15vw;
+    min-height: 15vw;
+}
+
+.home-user-info {
+    display: flex;
+    align-items: center;
+}
+
+.home-name {
+    font-size: 22px;
+    padding-bottom: 5px;
+    font-weight: 550;
+}
+
+.home-little-name {
+    display: flex;
+}
+
+.home-little-name > i {
+    font-size: 12px;
+    color: #999999;
+    padding-right: 5px;
+}
+
+.home-little-name > p {
+    font-size: 12px;
+    color: #999999
+}
+
+.home-flex-box1 {
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.home-flex-box {
+    display: flex;
+    justify-content: space-around;
+}
+
+.home-show-stat1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6px 16px 6px 16px;
+    border-right: 1px solid rgba(0,0,0,0.1);
+    max-width: 110px;
+    min-width: 110px;
+    background-color: #f8f8f8;
+
+}
+
+.home-show-stat1:hover {
+    background-color: #eeecec;
+}
+
+.home-show-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6px 16px 6px 16px;
+    max-width: 110px;
+    min-width: 110px;
+    background-color: #f8f8f8;
+}
+
+.home-show-stat:hover {
+    background-color: #eeecec;
+}
+
+.home-stat {
+    color: #333333;
+    font-size: 0.6em;
+    font-weight: 600;
+}
+
+.home-count {
+    color: #333333;
+    font-size: 21px;
+    margin-bottom: 4px;
+}
+
+.home-user-count {
+    color: #333333;
+    font-size: 23px;
+    text-decoration: none;
+}

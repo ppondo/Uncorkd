@@ -1,12 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import CheckinFeedItem from '../checkins/checkin_feed_item';
 
 class BeverageShow extends React.Component {
+
+    constructor(props) {
+        super(props)
+        this.state = {
+            filterObj: {
+                beverage_id: this.props.match.params.beverageId,
+                brewery_id: null
+            }
+        }
+    }
 
     componentDidMount() {
         // debugger
         this.props.fetchBeverage(this.props.match.params.beverageId);
         this.props.fetchBreweries();
+        this.props.fetchCheckins(this.state.filterObj);
     }
 
     componentDidUpdate(prevProps) {
@@ -46,12 +58,24 @@ class BeverageShow extends React.Component {
                 ch.user_id
             )
         })
-        
+
         const brew = this.props.breweries[this.props.beverage.brewery_id];
 
         if (brew === undefined) {
             return null;
         }
+
+        const CheckinFeedItems = this.props.checkins.map(checkin => {
+            return (
+                <CheckinFeedItem
+                    key={checkin.id}
+                    checkin={checkin}
+                    checkinUser={this.props.users[checkin.user_id]}
+                    checkinBeverage={this.props.beverage.id}
+                    checkinBrewery={brew}
+                />
+            )
+        })
 
 
         let dateObj = new Date(this.props.beverage.created_at);
@@ -69,7 +93,7 @@ class BeverageShow extends React.Component {
                         <div className='bev-show-text'>
                             <div className='bev-show-name'>
                                 <div > {this.props.beverage.name}</div>
-                                <Link className='name-link' to={`/breweries/${this.props.beverage.brewery_id}`}>{brew.name}</Link>
+                                <Link className='name-link' to={`/breweries/${this.props.beverage.brewery_id}`}>{this.props.beverage.brewName}</Link>
                             </div>
                             <div className='bev-show-style'>
                                 {this.props.beverage.style}
@@ -138,8 +162,17 @@ class BeverageShow extends React.Component {
                             </div>
                         </div>
                     </div>
+                    <div className='checkin-index-container'>
+                        <div className='checkin-index'>
+                            <div className='checkin-index-title'>Recent Activity</div>
+                            {CheckinFeedItems.reverse()}
+                        </div>
+                        {/* <div className='brewery-sidebar'>
+                            <div className='sidebar-title'>Global Top Beers</div>
+                        </div> */}
+                    </div>
                 </div>
-                <div className='show-sidebar'>
+                <div className='brew-show-sidebar'>
                 </div>
             </div>
         )

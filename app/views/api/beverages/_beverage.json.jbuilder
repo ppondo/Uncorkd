@@ -19,3 +19,5 @@ json.userCheckins do
 end
 
 json.avgRating Beverage.avg_rating(beverage)
+
+json.brewName beverage.brewery.name

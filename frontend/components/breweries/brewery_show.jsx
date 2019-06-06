@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import CheckinFeedItem from '../checkins/checkin_feed_item'
+import CheckinFeedItem from '../checkins/checkin_feed_item';
 
 class BreweryShow extends React.Component {
 

@@ -1,6 +1,6 @@
 class Api::BeveragesController < ApplicationController
     def index
-        if params[:brewery_id] != ""
+        if params[:brewery_id]
             brewery = Brewery.find(params[:brewery_id])
             @beverages = brewery.beverages
         else

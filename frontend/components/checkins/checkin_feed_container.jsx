@@ -10,6 +10,7 @@ const mapStateToProps = state => ({
     users: state.entities.users,
     beverages: state.entities.beverages,
     breweries: state.entities.breweries,
+    currentUserId: state.session.id
 })
 
 const mapDispatchToProps = dispatch => ({

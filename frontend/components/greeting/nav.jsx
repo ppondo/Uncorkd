@@ -7,7 +7,7 @@ export default ({currentUser, logOut}) => {
             <div className='nav-bar'>
                 <div className='left-nav'>
                     <div className='nav-logo'>
-                        <div className='nav-logo-title'>UNCORKD</div>
+                        <Link to='/home' className='nav-logo-title'>UNCORKD</Link>
                         <span className='nav-logo-span'>DRINK SOCIALLY</span>
                     </div>
                     <div className='nav-link'>
