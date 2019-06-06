@@ -44,6 +44,7 @@ class UserProfile extends React.Component {
         })
 
         return (
+            <>
             <div className='user-profile-container'>
                 <div className='profile-header' style={headerStyle}>
                     {/* <img className='user-profile-header' src={window.profileHeader} alt=""/>  */}
@@ -82,9 +83,21 @@ class UserProfile extends React.Component {
                         <div className='profile-sidebar-item'> 
                             <p>Lists</p>
                         </div>
+                        <div className='profile-sidebar-item'>
+                            <p>Top Beers</p>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div className='home-footer'>
+                <div className='home-footer-nav'>
+                    <a className='home-footer-link' href='https://github.com/ppondo/Uncorkd'>Github</a>
+                    <a className='home-footer-link' href='www.linkedin.com/in/patrickpondo' >LinkedIn</a>
+                    <a className='home-footer-link' href='' >Personal Site</a>
+                    <Link className='home-footer-link' to='/breweries' >Breweries</Link>
+                </div>
+            </div>
+            </>
         );
 
     }

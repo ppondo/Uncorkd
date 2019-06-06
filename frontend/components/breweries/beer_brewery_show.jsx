@@ -90,6 +90,7 @@ class BeerBreweryShow extends React.Component {
 
         // debugger
         return (
+            <>
             <div className='brewery-show'>
                 <div className='show-content'>
                     <div className='show-info'>
@@ -170,6 +171,15 @@ class BeerBreweryShow extends React.Component {
                     </div>
                 </div>
             </div>
+            <div className='home-footer'>
+                <div className='home-footer-nav'>
+                    <a className='home-footer-link' href='https://github.com/ppondo/Uncorkd'>Github</a>
+                    <a className='home-footer-link' href='www.linkedin.com/in/patrickpondo' >LinkedIn</a>
+                    <a className='home-footer-link' href='' >Personal Site</a>
+                    <Link className='home-footer-link' to='/breweries' >Breweries</Link>
+                </div>
+            </div>
+            </>
         );
     }
 }

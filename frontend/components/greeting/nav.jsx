@@ -26,7 +26,7 @@ export default ({currentUser, logOut}) => {
                         <div className='dropdown-content'>
                             <ul className='dropdown-list'>
                                 <Link className='dropdown-link' to='/home'>Recent Activity</Link>
-                                <Link className='dropdown-link' to={`users/${currentUser.id}`}>My Profile</Link>
+                                <Link className='dropdown-link' to={`/users/${currentUser.id}`}>My Profile</Link>
                                 <div onClick={logOut}>Logout</div>
                             </ul>
                         </div>

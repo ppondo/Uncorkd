@@ -113,3 +113,32 @@
     border-bottom: 1px solid #e5e5e5;
     font-weight: 500;
 }
+
+.home-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 90px 20px 90px;
+    background-color: #f5f2e8;
+    margin-top: 40px;
+}
+
+.home-footer-nav {
+    
+}
+
+.home-footer-link {
+    padding-left: 5px;
+    padding-right: 5px;
+    text-decoration: none;
+    color: #c60;
+    padding: 10px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.home-footer-link:hover {
+    color: rgb(255, 154, 52);
+    cursor: pointer;
+    // transition: color .25s ease-out, color .25s ease-out;
+}

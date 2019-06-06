@@ -87,6 +87,7 @@ class BeverageShow extends React.Component {
         const date = month + "/" + day + "/" + year;
         
         return (
+            <>
             <div className='container'>
                 <div className='bev-show-box'>
                     <div className='bev-show'>
@@ -182,6 +183,15 @@ class BeverageShow extends React.Component {
                     </div>
                 </div>
             </div>
+            <div className='home-footer'>
+                <div className='home-footer-nav'>
+                    <a className='home-footer-link' href='https://github.com/ppondo/Uncorkd'>Github</a>
+                    <a className='home-footer-link' href='www.linkedin.com/in/patrickpondo' >LinkedIn</a>
+                    <a className='home-footer-link' href='' >Personal Site</a>
+                    <Link className='home-footer-link' to='/breweries' >Breweries</Link>
+                </div>
+            </div>
+            </>
         )
     }
 }
