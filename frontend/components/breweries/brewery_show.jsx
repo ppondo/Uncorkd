@@ -71,6 +71,8 @@ class BreweryShow extends React.Component {
             )
         })
 
+        const circleWidth = (avgRate / 5) * 100
+
         let dateObj = new Date(this.props.brewery.created_at);
         let month = dateObj.getUTCMonth() + 1; //months from 1-12
         let day = dateObj.getUTCDate();
@@ -124,10 +126,12 @@ class BreweryShow extends React.Component {
                                 </div>
                             </div>
                             <div className='show-info-ratings'>
-                                <div className='show-avg-rating'>
-                                    <i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i>
-                                    <div>({avgRate})</div>
-                                    {/* <div className='rate2'><i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i></div> */}
+                                <div className='rating-circles'>
+                                    <span className='rating-circles-box'>
+                                        <div style={{ width: `${circleWidth}%` }}></div>
+                                        {/* <div><i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i></div> */}
+                                    </span>
+                                    <div className='paren-rating'>({avgRate})</div>
                                 </div>
                                 <div className='show-num-ratings'>{this.props.brewery.checkins.length} Ratings</div>
                                 <Link to={`/breweries/${this.props.brewery.id}/beer`} className='show-num-beers'>{this.props.brewery.beverages.length} Beers</Link>

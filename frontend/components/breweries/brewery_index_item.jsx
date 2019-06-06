@@ -10,6 +10,8 @@ const BreweryIndexItem = (props) => {
         avgRate = props.brewery.avgRating.toFixed(2);
     }
 
+    const circleWidth = (avgRate / 5) * 100
+
     return (
         <div className='box'>
             <div className='brewery-box'>
@@ -33,14 +35,13 @@ const BreweryIndexItem = (props) => {
                             {props.brewery.checkins.length} ratings{/* this will have brewery.checkins.length (thru assoc.) */}
                         </div> 
                     </div>
-                    <div className='avg-rating'>
-                        <i className="fas fa-circle"></i>
-                        <i className="fas fa-circle"></i>
-                        <i className="fas fa-circle"></i>
-                        <i className="fas fa-circle"></i>
-                        <i className="fas fa-circle"></i>
-                        <div>({avgRate})</div>
-                    </div> 
+                    <div className='brew-rating-circles'>
+                        <span className='rating-circles-box'>
+                            <div style={{ width: `${circleWidth}%` }}></div>
+                            {/* <div><i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i></div> */}
+                        </span>
+                        <div className='paren-rating'>({avgRate})</div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -85,6 +85,8 @@ class BeverageShow extends React.Component {
         let year = dateObj.getUTCFullYear();
 
         const date = month + "/" + day + "/" + year;
+
+        const circleWidth = (avgRate / 5) * 100
         
         return (
             <>
@@ -135,9 +137,12 @@ class BeverageShow extends React.Component {
                     <div className='bev-info-ratings'>
                         <div className='show-num-ratings'>{this.props.beverage.ABV}% ABV</div>
                         <div className='show-num-ratings'>{this.props.beverage.IBU} IBU</div>
-                        <div className='show-avg-rating'>
-                            <i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i>
-                            <div>({avgRate})</div>
+                        <div className='rating-circles'>
+                            <span className='rating-circles-box'>
+                                <div style={{ width: `${circleWidth}%` }}></div>
+                                {/* <div><i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i></div> */}
+                            </span>
+                            <div className='paren-rating'>({avgRate})</div>
                         </div>
                         <div className='show-num-ratings'>{this.props.beverage.checkins.length} Ratings</div>
                         <div className='show-date'>{`Added ${date}`}</div>

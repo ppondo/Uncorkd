@@ -143,10 +143,55 @@
     // transition: color .25s ease-out, color .25s ease-out;
 }
 
-.orange {
-    
+.rating-circles {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-right: 1px solid #eee;
+    text-align: center;
+    color: #999999;
+    font-size: 16px;
 }
 
-.white {
-    
+.brew-rating-circles {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    // border-right: 1px solid #eee;
+    text-align: center;
+    color: #999999;
+    font-size: 16px;
+    padding-left: 4px;
+    margin-top: 4px;
+}
+
+.rating-circles-box {
+    background-image: image-url('rating-circles.png');
+    height: 33px;
+    width: 122px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.rating-circles-box > div {
+    background-image: image-url('yellow-orange-circles.png');
+    max-height: 31px;
+    min-height: 31px;
+    overflow: hidden;
+    padding-bottom: 0.50px;
+    // padding-top: 11px;
+    // padding-left: 4px;
+}
+
+.rating-circles-box > div > i {
+    padding: 1.2px;
+    font-size: 1.25em;
+    color: #ffcc00
+}
+
+.paren-rating {
+    padding-right: 10px;
 }

@@ -63,6 +63,8 @@ const CheckinFeedItem = ({
 
     const date = month + " " + day + " " + year;
 
+    const circleWidth = (checkin.rating / 5) * 100
+
     return (
         <div className='checkin-index-content'>
             <div className='checkin-avatar'>
@@ -81,8 +83,11 @@ const CheckinFeedItem = ({
                 <div className='rating-box'>
                     <div className='checkin-text-body'>
                         {body}
-                        <div className='checkin-avg-rating'>
-                            <i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i>
+                        <div className='brew-rating-circles'>
+                            <span className='rating-circles-box'>
+                                <div style={{ width: `${circleWidth}%` }}></div>
+                                {/* <div><i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i></div> */}
+                            </span>
                         </div>
                     </div>
                     {checkinImg}

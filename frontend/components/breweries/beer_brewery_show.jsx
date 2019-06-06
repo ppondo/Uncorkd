@@ -88,6 +88,8 @@ class BeerBreweryShow extends React.Component {
 
         const date = month + "/" + day + "/" + year;
 
+        const circleWidth = (avgRate / 5) * 100
+
         // debugger
         return (
             <>
@@ -134,9 +136,12 @@ class BeerBreweryShow extends React.Component {
                             </div>
                         </div>
                         <div className='show-info-ratings'>
-                            <div className='show-avg-rating'>
-                                <i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i>
-                                <div>({avgRate})</div>
+                            <div className='rating-circles'>
+                                <span className='rating-circles-box'>
+                                    <div style={{ width: `${circleWidth}%` }}></div>
+                                        {/* <div><i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i></div> */}
+                                </span>
+                                <div className='paren-rating'>({avgRate})</div>
                             </div>
                             <div className='show-num-ratings'>{this.props.brewery.checkins.length} Ratings</div>
                             <div className='show-num-ratings'>{this.props.brewery.beverages.length} Beers</div>
