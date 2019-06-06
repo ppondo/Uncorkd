@@ -37,8 +37,6 @@ body {
     width: 95%
 }
 
-.checkin-text-body::before {
-}
 
 .checkin-avg-rating {
     margin: 8px 5px 8px 0;
@@ -65,6 +63,13 @@ body {
 }
 
 .checkin-beverage-img {
+    min-width: 42px;
+    max-width: 42px;
+    min-height: 42px;
+    max-height: 42px;
+}
+
+.checkin-beverage-img > img {
     min-width: 42px;
     max-width: 42px;
     min-height: 42px;
