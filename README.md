@@ -7,7 +7,7 @@ with their friends. Users can also browse through the collection of breweries an
 
 
 ## Features
------------
+
 <ul>
     <li> Backend to Frontend user authentication with password and session token encryption. </li>
     <li> On login, users are redirected to the home page where they can view the recent activty of other users. </li>
@@ -18,7 +18,7 @@ with their friends. Users can also browse through the collection of breweries an
 </ul>
 
 ## Technologies
----------------
+
 ### Backend
 <ul>
     <li> Ruby 2.5.1 </li>
@@ -33,6 +33,17 @@ with their friends. Users can also browse through the collection of breweries an
     <li> JavaScript-ES6 </li>
 </ul>
 
-## 
+## Feature Highlights
 
-<!-- ![Alt text](http://full/path/to/img.jpg "Optional title") -->
+![Brew Show](https://github.com/ppondo/Uncorkd/blob/master/app/assets/images/brew-show.png "Brewery Show")
+
+The Brewery Show page includes an average rating display, which renders the current rating out of five.
+This was acheived by calculating the average rating in the backend, passing that rating up when the frontend requests it, and updating the styling of the rating display when the rating changes.
+
+This page also displays the total, unique, and monthly checkins for each brewery, as well as the amount of checkins the current user has created for beverages that belong to that brewery.
+
+![Checkin](https://github.com/ppondo/Uncorkd/blob/master/app/assets/images/checkin.png "Checkin")
+
+Checkins display the optional rating that the user provided on review, the optional body of the review, and an image if the user chooses to include one. The images that the users include in their reviews are uploaded to and retrieved from a bucket provided by Amazon's S3 service.
+
+The checkins also include a link to a page which displays a detailed version of a single checkin, as well as a button that removes the checkin from the app. This action updates the users stats accordingly.
