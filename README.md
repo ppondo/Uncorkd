@@ -1,24 +1,38 @@
-# README
+# UNCORKD
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+UNCORKD is a beer review site inspired by UNTAPPD, users can share their opinions and thoughts
+with their friends. Users can also browse through the collection of breweries and beverages listed on the site. 
 
-Things you may want to cover:
+[UNCORKD Live](https://uncork-d.herokuapp.com/)
 
-* Ruby version
 
-* System dependencies
+## Features
+-----------
+<ul>
+    <li> Backend to Frontend user authentication with password and session token encryption. </li>
+    <li> On login, users are redirected to the home page where they can view the recent activty of other users. </li>
+    <li> Users are able to look through the list of breweries and their respective beverages. </li>
+    <li> Users can check-in a beverage they've tried, share their thoughts, and incldue a picture! </li>
+    <li> Users have a profile page that displays their check-ins and stats for their account. </li>
+    <li> Display pages for breweries and beverages are updated to show the proper ratings and check-in counts </li>
+</ul>
 
-* Configuration
+## Technologies
+---------------
+### Backend
+<ul>
+    <li> Ruby 2.5.1 </li>
+    <li> Rails 5.3.2 </li>
+    <li> Postgresql </li>
+</ul>
 
-* Database creation
+### Frontend
+<ul>
+    <li> React </li>
+    <li> Redux </li>
+    <li> JavaScript-ES6 </li>
+</ul>
 
-* Database initialization
+## 
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+<!-- ![Alt text](http://full/path/to/img.jpg "Optional title") -->
