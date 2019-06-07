@@ -57,7 +57,7 @@ The checkins also include a link to a page which displays a detailed version of 
 <ul>
     <li> Likes and Comments! Users will be able to comment on checkins and like them. </li>
     <li> Search! Users will be able to search the app for particular beverages, breweries, or users. </li>
-    <li> Badges! Users will receive special badges for reaching milestones (number of checkins, checkin in certain styles, etc.) </li>
+    <li> Badges! Users will receive special badges for reaching milestones (number of checkins, checking in certain styles, etc.) </li>
     <li> Friends! Users will be able to add friends to interact with on the app. </li>
     <li> Profile Customization! Users will be able to change their avatar and profile header image. </li>
 </ul>
