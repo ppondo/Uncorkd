@@ -52,6 +52,31 @@ Checkins display the optional rating that the user provided on review, the optio
 
 The checkins also include a link to a page which displays a detailed version of a single checkin, as well as a button that removes the checkin from the app. This action updates the users stats accordingly.
 
+### Checkin Filtering
+
+When a particular page is shown (User Profile, Brewery Page, Beverage Page) a filter is included in the ajax request sent to the Checkin API which allows the controller to pass back the correct checkins for the page the user navigates to. This helps to keep the checkins slice of state lighter, particularly as the amount of checkins stored in the database grows.
+
+```Ruby
+class Api::CheckinsController < ApplicationController
+
+    def index
+        if params[:brewery_id]
+            @checkins = Checkin.where(brewery_id: params[:brewery_id]).
+                        includes(:beverage, :user)
+        elsif params[:beverage_id]
+            @checkins = Checkin.where(beverage_id: params[:beverage_id]).
+                        includes(:user, :brewery)
+        elsif params[:user_id]
+            @checkins = Checkin.where(user_id: params[:user_id]).
+                        includes(:beverage, :brewery)
+        else
+            @checkins = Checkin.all.includes(:beverage, :user, :brewery)
+        end
+
+        render :index
+    end
+```
+
 ## Upcoming Features
 
 <ul>

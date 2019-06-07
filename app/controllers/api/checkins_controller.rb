@@ -1,6 +1,5 @@
 class Api::CheckinsController < ApplicationController
     def index
-        # debugger
         if params[:brewery_id] != ""
             brewery = Brewery.find(params[:brewery_id])
             @checkins = brewery.checkins.includes(:beverage, :user, :brewery)
