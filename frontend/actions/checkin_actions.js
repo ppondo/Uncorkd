@@ -4,6 +4,8 @@ export const RECEIVE_ALL_CHECKINS = 'RECEIVE_ALL_CHECKINS';
 export const RECEIVE_CHECKIN = 'RECEIVE_CHECKIN';
 export const DELETE_CHECKIN = 'DELETE_CHECKIN';
 
+// thunk action creators
+
 export const fetchCheckins = (filterId) => dispatch => {
     // debugger
     return (
@@ -22,6 +24,16 @@ export const createCheckin = (checkin) => dispatch => (
 export const deleteCheckin = (checkinId) => dispatch => (
     CheckinApiUtil.deleteCheckin(checkinId).then(checkin => dispatch(removeCheckin(checkinId)))
 )
+
+export const likeCheckin = id => dispatch (
+    CheckinApiUtil.likeCheckin(id).then(checkin => dispatch(receiveCheckin(checkin)))
+)
+
+export const dislikeCheckin = id => dispatch(
+    CheckinApiUtil.dislikeCheckin(id).then(checkin => dispatch(receiveCheckin(checkin)))
+)
+
+// standard action creators (return POJOs)
 
 const removeCheckin = checkinId => ({
     type: DELETE_CHECKIN,

@@ -11,3 +11,5 @@ if checkin.img.attached?
 end
 
 json.breweryId checkin.brewery, :id
+
+json.likes checkins.likes.count
