@@ -25,11 +25,11 @@ export const deleteCheckin = (checkinId) => dispatch => (
     CheckinApiUtil.deleteCheckin(checkinId).then(checkin => dispatch(removeCheckin(checkinId)))
 )
 
-export const likeCheckin = id => dispatch (
+export const likeCheckin = id => dispatch => (
     CheckinApiUtil.likeCheckin(id).then(checkin => dispatch(receiveCheckin(checkin)))
 )
 
-export const dislikeCheckin = id => dispatch(
+export const dislikeCheckin = id => dispatch => (
     CheckinApiUtil.dislikeCheckin(id).then(checkin => dispatch(receiveCheckin(checkin)))
 )
 

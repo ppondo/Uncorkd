@@ -9,7 +9,10 @@ const CheckinFeedItem = ({
     checkinBeverage, 
     checkinBrewery,
     currentUserId,
-    deleteCheckin
+    deleteCheckin,
+    likeCheckin,    
+    dislikeCheckin,    
+
     }) => {
 
     if (checkin === undefined || 
@@ -23,6 +26,21 @@ const CheckinFeedItem = ({
         // debugger
         e.preventDefault
         deleteCheckin(checkin.id)
+    }
+
+    let likeClass = 'checkin-toast';
+    let handleLike = () => likeCheckin(checkin.id);
+    if (checkin.liked) {
+        likeClass = 'checkin-toast-clicked';
+        handleLike = () => dislikeCheckin(checkin.id)
+    }
+
+    let checkinLikeCount = <div></div>;
+    if (checkin.likes > 0) {
+        checkinLikeCount = <div className='like-display'>
+                             <p className='like-count'>{checkin.likes}</p>
+                             <p></p>
+                           </div>
     }
     
     let delCheckin;    
@@ -86,17 +104,27 @@ const CheckinFeedItem = ({
                         <div className='brew-rating-circles'>
                             <span className='rating-circles-box'>
                                 <div style={{ width: `${circleWidth}%` }}></div>
-                                {/* <div><i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i><i className="fas fa-circle"></i></div> */}
                             </span>
                         </div>
                     </div>
                     {checkinImg}
+                </div>
+                <div className='checkin-interact'>
+                    <button className='checkin-comment'>
+                        <i className="fas fa-comment-alt"></i>
+                        <p> Comment</p>
+                    </button>
+                    <button onClick={handleLike} className={likeClass}>
+                        <i className="fas fa-beer"></i>
+                        <p className='toast'> Toast</p>
+                    </button>
                 </div>
                 <div className='date-detail'>
                     <div className='checkin-date'>{date}</div>
                     <Link className='date-detail-item' to='/home'>View Detailed Check-in</Link>
                     {delCheckin}
                 </div>
+                {checkinLikeCount}
             </div>
             <div className='checkin-beverage-img'>
                 <img src={checkinBeverage.imgUrl} alt=""/>

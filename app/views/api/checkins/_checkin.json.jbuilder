@@ -12,4 +12,6 @@ end
 
 json.breweryId checkin.brewery, :id
 
-json.likes checkins.likes.count
+json.likes checkin.likes.count
+
+json.liked !!checkin.likes.find_by(user_id: current_user.id)

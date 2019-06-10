@@ -6,7 +6,7 @@ class Api::LikesController < ApplicationController
 
         if @like.save
             @checkin = @like.checkin
-            render '/api/checkins/show'
+            render 'api/checkins/show'
         else
             render json: @likes.errors.full_messages, status: 401
         end
@@ -16,6 +16,6 @@ class Api::LikesController < ApplicationController
         @like = Like.find_by(user_id: current_user.id, checkin_id: params[:id])
         @like.destroy
         @checkin = @like.checkin
-        render '/api/checkins/show'
+        render 'api/checkins/show'
     end
 end
