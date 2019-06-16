@@ -2,7 +2,9 @@ body {
     font-family: 'ProximaNova', Helvetica, sans-serif;
 }
 
-button:focus {outline:0;}
+button:focus {
+    outline: 0;
+}
 
 .checkin-index-title {
     font-size: 1.4em;
