@@ -1,1 +1,1 @@
-json.partial! 'checkin', checkin: @checkin
+json.partial! 'api/checkins/checkin', checkin: @checkin

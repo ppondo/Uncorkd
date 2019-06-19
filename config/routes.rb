@@ -7,5 +7,7 @@ Rails.application.routes.draw do
     resources :beverages, except: [:new, :edit, :destroy]
     resources :breweries, except: [:new, :edit, :destroy]
     resources :checkins, except: [:new, :edit]
+    resources :likes, only: [:create]
+    delete '/likes', to: 'likes#destroy'
   end
 end

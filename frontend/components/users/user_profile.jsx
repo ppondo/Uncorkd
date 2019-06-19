@@ -39,6 +39,8 @@ class UserProfile extends React.Component {
                     checkinUser={this.props.user}
                     checkinBeverage={this.props.beverages[checkin.beverage_id]}
                     checkinBrewery={this.props.breweries[checkin.breweryId.id]}
+                    likeCheckin={this.props.likeCheckin}
+                    dislikeCheckin={this.props.dislikeCheckin}
                 />
             )
         })
@@ -53,21 +55,21 @@ class UserProfile extends React.Component {
                         <p>{this.props.user.first_name} {this.props.user.last_name}</p>
                         <span>{this.props.user.username}</span>
                         <div className='user-profile-stats'>
-                            <Link to={`users/${this.props.user.id}`} className='user-profile-stat'>
+                            <Link to={`/users/${this.props.user.id}`} className='user-profile-stat'>
                                 <span className='profile-count'>
                                     {this.props.user.checkins.length}</span>
                                 <span className='profile-stat'>TOTAL</span>
                             </Link>
-                            <Link to={`users/${this.props.user.id}`} className='user-profile-stat'>
+                            <Link to={`/users/${this.props.user.id}`} className='user-profile-stat'>
                                 <span className='profile-count'>
                                     {this.props.user.checkins.length}</span>
                                 <span className='profile-stat'>UNIQUE</span>
                             </Link>
-                            <Link to={`users/${this.props.user.id}`} className='user-profile-stat'>
+                            <Link to={`/users/${this.props.user.id}`} className='user-profile-stat'>
                                 <span className='profile-count'>0</span>
                                 <span className='profile-stat'>BADGES</span>
                             </Link>
-                            <Link to={`users/${this.props.user.id}`} className='user-profile-stat'>
+                            <Link to={`/users/${this.props.user.id}`} className='user-profile-stat'>
                                 <span className='profile-count'>0</span>
                                 <span className='profile-stat'>FRIENDS</span>
                             </Link>

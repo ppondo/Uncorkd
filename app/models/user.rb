@@ -25,6 +25,12 @@ class User < ApplicationRecord
 
     has_one_attached :img
     has_many :checkins
+    
+    has_many :likes
+
+    has_many :liked_checkins,
+        through: :likes,
+        source: :checkins
 
     attr_reader :password
 

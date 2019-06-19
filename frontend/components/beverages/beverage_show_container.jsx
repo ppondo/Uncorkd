@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { fetchBeverage } from '../../actions/beverage_actions';
 import { fetchBreweries } from '../../actions/brewery_actions';
-import { fetchCheckins } from '../../actions/checkin_actions';
+import { fetchCheckins, likeCheckin, dislikeCheckin } from '../../actions/checkin_actions';
 import BeverageShow from './beverage_show';
 
 const msp = (state, ownProps) => ({
@@ -15,7 +15,9 @@ const msp = (state, ownProps) => ({
 const mdp = dispatch => ({
     fetchBeverage: (id) => dispatch(fetchBeverage(id)),
     fetchBreweries: () => dispatch(fetchBreweries()),
-    fetchCheckins: (filterObj) => dispatch(fetchCheckins(filterObj))
+    fetchCheckins: (filterObj) => dispatch(fetchCheckins(filterObj)),
+    likeCheckin: (id) => dispatch(likeCheckin(id)),
+    dislikeCheckin: (id) => dispatch(dislikeCheckin(id))
 })
 
 export default connect(msp, mdp)(BeverageShow);

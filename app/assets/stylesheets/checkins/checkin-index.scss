@@ -2,6 +2,10 @@ body {
     font-family: 'ProximaNova', Helvetica, sans-serif;
 }
 
+button:focus {
+    outline: 0;
+}
+
 .checkin-index-title {
     font-size: 1.4em;
     font-weight: 500;
@@ -252,4 +256,115 @@ body {
     font-size: 23px;
     text-decoration: none;
 }
+
+.checkin-interact {
+    padding: 13px 0;
+    width: 100%;
+    display: flex;
+}
+
+.checkin-comment {
+    padding: 10px 0;    
+    text-align: center;
+    width: 46%;
+    background-color: #a7a7a7;
+    border: none;
+    margin-right: 5px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkin-comment:hover {
+    cursor: pointer;
+    background-color: #868585;
+}
+
+.checkin-comment > p {
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.checkin-comment > i {
+    color: #ffffff;
+    font-size: 16px;
+    padding-right: 4px;
+}
+
+.checkin-toast {
+    background-color: #a7a7a7;
+    padding: 10px 0;
+    text-align: center;
+    width: 46%;
+    border: none;
+    margin-left: 5px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.checkin-toast:hover {
+    cursor: pointer;
+    background-color: #868585;
+}
+
+.checkin-toast-clicked {
+    background-color: #ffcc00;
+    padding: 10px 0;
+    text-align: center;
+    width: 46%;
+    border: none;
+    margin-left: 5px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.checkin-toast-clicked:hover {
+    cursor: pointer;
+}
+
+.toast {
+    color: #ffffff;     
+    font-size: 16px;
+}
+
+.checkin-toast > i {
+    color: #ffffff;     
+    font-size: 16px;
+    padding-right: 4px;
+
+}
+
+.checkin-toast-clicked > i {
+    color: #ffffff;     
+    font-size: 16px;
+    padding-right: 4px;
+}
+
+.like-display {
+    display: flex;
+    margin-top: 8px;
+    padding: 10px 0;
+    background-color: #f9f9f9;
+    align-items: center;
+    width: 95%
+}
+
+.like-count {
+    font-size: 24px;
+    font-weight: 500;
+    color: #666;
+    padding: 0 10px 0 20px;
+}
+.like-display > i {
+    color: #ffcc00;
+    font-size: 24px;
+    padding-right: 15px;
+    border-right: 1px solid #d6d5d5;
+}
+
 

@@ -11,3 +11,7 @@ if checkin.img.attached?
 end
 
 json.breweryId checkin.brewery, :id
+
+json.likes checkin.likes.count
+
+json.liked !!checkin.likes.find_by(user_id: current_user.id)

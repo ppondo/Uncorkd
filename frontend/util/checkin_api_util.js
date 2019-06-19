@@ -36,3 +36,19 @@ export const deleteCheckin = (id) => {
         url: `api/checkins/${id}`
     });
 }
+
+export const likeCheckin = (id) => (
+    $.ajax({
+        url: '/api/likes',
+        method: 'post',
+        data: { id }
+    })
+)
+
+export const dislikeCheckin = (id) => (
+    $.ajax({
+        url: '/api/likes',
+        method: 'delete',
+        data: { id }
+    })
+)

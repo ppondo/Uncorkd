@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import CheckinFeed from './checkin_feed';
-import { fetchCheckins } from '../../actions/checkin_actions';
+import { fetchCheckins, likeCheckin, dislikeCheckin } from '../../actions/checkin_actions';
 import { fetchUsers } from '../../actions/session_actions';
 import { fetchBeverages } from '../../actions/beverage_actions';
 import { fetchBreweries } from '../../actions/brewery_actions';
@@ -18,6 +18,8 @@ const mapDispatchToProps = dispatch => ({
     fetchUsers: () => dispatch(fetchUsers()),
     fetchBeverages: () => dispatch(fetchBeverages()),
     fetchBreweries: () => dispatch(fetchBreweries()),
+    likeCheckin: (id) => dispatch(likeCheckin(id)),
+    dislikeCheckin: (id) => dispatch(dislikeCheckin(id))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(CheckinFeed);
