@@ -74,6 +74,8 @@ class BeverageShow extends React.Component {
                     checkinUser={this.props.users[checkin.user_id]}
                     checkinBeverage={this.props.beverage}
                     checkinBrewery={brew}
+                    likeCheckin={this.props.likeCheckin}
+                    dislikeCheckin={this.props.dislikeCheckin}
                 />
             )
         })

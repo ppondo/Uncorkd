@@ -39,7 +39,7 @@ const CheckinFeedItem = ({
     if (checkin.likes > 0) {
         checkinLikeCount = <div className='like-display'>
                              <p className='like-count'>{checkin.likes}</p>
-                             <p></p>
+                             <i className="fas fa-beer"></i>
                            </div>
     }
     
