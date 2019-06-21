@@ -23,7 +23,7 @@ const CheckinFeedItem = ({
     };
 
     const handleDelete = (e) => {
-        // debugger
+        debugger
         e.preventDefault
         deleteCheckin(checkin.id)
     }

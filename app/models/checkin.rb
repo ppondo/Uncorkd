@@ -23,9 +23,13 @@ class Checkin < ApplicationRecord
     belongs_to :user
     belongs_to :beverage
     has_many :likes
+    has_many :comments
 
     has_many :likers,
         through: :likes,
+        source: :user
+    has_many :commenters,
+        through: :comments,
         source: :user
 
     has_one :brewery,

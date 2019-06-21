@@ -19,7 +19,8 @@ class Api::CheckinsController < ApplicationController
     def show
         @checkin = Checkin.with_attached_img.includes(:beverage, 
                                                       :user, 
-                                                      :brewery).find(params[:id])
+                                                      :brewery,
+                                                      :comments).find(params[:id])
         render :show
     end
 
