@@ -53,6 +53,14 @@ export const dislikeCheckin = (id) => (
 )
 
 // comments
+// export const fetchComments = (checkin_id) => (
+//     $.ajax({
+//         url: '/api/comments',
+//         method: 'post',
+//         data: { checkin_id }
+//     })
+// ) 
+
 export const createComment = (comment) => (
     $.ajax({
         url: '/api/comments',
@@ -61,13 +69,6 @@ export const createComment = (comment) => (
     })
 ) 
 
-export const fetchComments = (checkin_id) => (
-    $.ajax({
-        url: '/api/comments',
-        method: 'post',
-        data: { checkin_id }
-    })
-) 
 
 export const deleteComment = (id) => (
     $.ajax({
