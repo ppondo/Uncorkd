@@ -19,8 +19,9 @@ class Api::CommentsController < ApplicationController
     # end
 
     def destroy
-        @comment = Comment.find_by(user_id: current_user.id, checkin_id: params[:id])
+        @comment = Comment.find(params[:id])
         @comment.destroy
+        # debugger
         @checkin = @comment.checkin
         render 'api/checkins/show'
     end

@@ -23,6 +23,8 @@ class CheckinFeed extends React.Component {
         this.props.fetchBreweries();
     }
 
+   
+
     render() {
         if (this.props.checkins === undefined || this.props.users === undefined) {
             return null
@@ -39,6 +41,8 @@ class CheckinFeed extends React.Component {
                     likeCheckin={this.props.likeCheckin}
                     dislikeCheckin={this.props.dislikeCheckin}
                     createComment={this.props.createComment}
+                    deleteComment={this.props.deleteComment}
+                    users={this.props.users}
                 />
             )
         })

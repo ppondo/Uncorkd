@@ -5,6 +5,7 @@ import {
     likeCheckin, 
     dislikeCheckin,
     createComment,
+    deleteComment
 } from '../../actions/checkin_actions';
 import { fetchUsers } from '../../actions/session_actions';
 import { fetchBeverages } from '../../actions/beverage_actions';
@@ -25,7 +26,7 @@ const mapDispatchToProps = dispatch => ({
     fetchBreweries: () => dispatch(fetchBreweries()),
     likeCheckin: (id) => dispatch(likeCheckin(id)),
     dislikeCheckin: (id) => dispatch(dislikeCheckin(id)),
-    // deleteComment: (id) => dispatch(deleteComment(id)),
+    deleteComment: (id) => dispatch(deleteComment(id)),
     createComment: (comment) => dispatch(createComment(comment))
 })
 
