@@ -1,3 +1,5 @@
+
+// comment form
 .hidden {
     display: none
 }
@@ -52,4 +54,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+// comment item
+
+.comment-item {
+    display: flex;
+}  
+
+.comment-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-user {
+    text-decoration: none;
+    color: #c60;
 }
