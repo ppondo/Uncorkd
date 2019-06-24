@@ -38,6 +38,7 @@ class CheckinFeed extends React.Component {
                     checkinBrewery={this.props.breweries[checkin.breweryId.id]}
                     likeCheckin={this.props.likeCheckin}
                     dislikeCheckin={this.props.dislikeCheckin}
+                    createComment={this.props.createComment}
                 />
             )
         })

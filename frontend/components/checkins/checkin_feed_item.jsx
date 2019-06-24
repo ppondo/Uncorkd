@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import React from 'react';
 import { deleteCheckin } from '../../actions/checkin_actions';
 import { connect } from 'react-redux';
+import CheckinCommentForm from './checkin_comment_form';
 
 const CheckinFeedItem = ({
     checkin, 
@@ -11,7 +12,8 @@ const CheckinFeedItem = ({
     currentUserId,
     deleteCheckin,
     likeCheckin,    
-    dislikeCheckin,    
+    dislikeCheckin,  
+    createComment  
 
     }) => {
 
@@ -23,10 +25,16 @@ const CheckinFeedItem = ({
     };
 
     const handleDelete = (e) => {
-        debugger
+       
         e.preventDefault
         deleteCheckin(checkin.id)
     }
+
+    let commentForm = <CheckinCommentForm 
+                        checkinId={checkin.id}
+                        createComment={createComment}
+                        currentUserId={currentUserId}
+                      />;
 
     let likeClass = 'checkin-toast';
     let handleLike = () => likeCheckin(checkin.id);
@@ -125,6 +133,8 @@ const CheckinFeedItem = ({
                     {delCheckin}
                 </div>
                 {checkinLikeCount}
+                
+                {commentForm}
             </div>
             <div className='checkin-beverage-img'>
                 <img src={checkinBeverage.imgUrl} alt=""/>

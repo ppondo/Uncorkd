@@ -1,41 +1,36 @@
 import React from 'react';
-import { createComment } from '../../actions/checkin_actions';
-
 
 class CheckinCommentForm extends React.Component {
     constructor(props) {
         super(props)
-        this.state = this.props.comment
+        this.state = {
+            body: '',
+            user_id: this.props.currentUserId,
+            checkin_id: this.props.checkinId
+        }
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleSubmit() {
-
+    handleSubmit(e) {
+        e.preventDefault();
+        this.props.createComment(this.state);
     }
 
-    update() {
-
+    update(field) {
+        return (e) => {
+            this.setState({ [field]: e.target.value })
+        }
     }
 
     render() {
-        
+        return (
+            <form className='comment' onSubmit={this.handleSubmit}>
+                <textarea className='comment-body' cols="30" rows="10" onChange={this.update('body')}></textarea>
+                <input type="submit" name="Comment"/>
+            </form>
+        )
     }
 }
 
 
-const msp = (state, ownProps) => {
-    const currentUserId = state.session.id
-    const checkinId = ownProps.match.params.checkinId;
-    const comment = {
-        body: '',
-        user_id: currentUserId,
-        checkin_id: checkinId,
-    }
-
-    return { comment }
-}
-
-const mdp = dispatch => ({
-    createComment: comment => dispatch(createComment(comment))
-})
-
-export default connect(msp, mdp)(CheckinCommentForm)
+export default CheckinCommentForm

@@ -2,14 +2,14 @@ class Api::CommentsController < ApplicationController
     def create
         @comment = Comment.new
         @comment.user_id = current_user.id
-        @comment.checkin_id = params[:id]
+        @comment.checkin_id = params[:checkin_id]
         @comment.body = params[:body]
 
         if @comment.save
             @checkin = @comment.checkin
             render 'api/checkins/show'
         else
-            render json: @comments.errors.full_messages, status: 401
+            render json: @comment.errors.full_messages, status: 401
         end
     end
 
