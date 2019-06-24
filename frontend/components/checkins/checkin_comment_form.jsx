@@ -17,6 +17,7 @@ class CheckinCommentForm extends React.Component {
         const form = document.getElementById('comment-form');
         form.classList.add('hidden')
         form.classList.remove('flex')
+        this.setState({body: ''})
     }
 
     update(field) {
@@ -28,7 +29,14 @@ class CheckinCommentForm extends React.Component {
     render() {
         return (
             <form id='comment-form'className='comment-form hidden'>
-                <textarea className='comment-form-body' cols="15" rows="5" onChange={this.update('body')}></textarea>
+                <textarea 
+                    id='comment-form-body'
+                    className='comment-form-body' 
+                    value={this.state.body}
+                    cols="15" rows="5" 
+                    onChange={this.update('body')}
+                    placeholder='Leave a comment...'>
+                </textarea>
                 <div className='comment-form-bottom'>
                     <div className='comment-body-count'>{this.state.body.length}/140</div>
                     <button onClick={this.handleSubmit} className='comment-form-submit'>Post</button>

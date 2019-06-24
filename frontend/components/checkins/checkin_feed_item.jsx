@@ -49,8 +49,8 @@ const CheckinFeedItem = ({
 
     const handleComment = () => {
         const form = document.getElementById('comment-form');
-        form.classList.remove('hidden')
-        form.classList.add('flex')
+        form.classList.toggle('hidden')
+        form.classList.toggle('flex')
     }
 
     let likeClass = 'checkin-toast';
