@@ -41,6 +41,9 @@ class UserProfile extends React.Component {
                     checkinBrewery={this.props.breweries[checkin.breweryId.id]}
                     likeCheckin={this.props.likeCheckin}
                     dislikeCheckin={this.props.dislikeCheckin}
+                    createComment={this.props.createComment}
+                    deleteComment={this.props.deleteComment}
+                    users={this.props.users}
                 />
             )
         })

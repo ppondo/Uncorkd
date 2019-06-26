@@ -40,6 +40,9 @@ class BreweryShow extends React.Component {
                     checkinBrewery={this.props.brewery}
                     likeCheckin={this.props.likeCheckin}
                     dislikeCheckin={this.props.dislikeCheckin}
+                    createComment={this.props.createComment}
+                    deleteComment={this.props.deleteComment}
+                    users={this.props.users}
                 />
             )
         })

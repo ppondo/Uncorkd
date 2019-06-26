@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom';
 import React from 'react';
 import { deleteCheckin } from '../../actions/checkin_actions';
 import { connect } from 'react-redux';
+import CheckinCommentForm from './checkin_comment_form';
+import CheckinCommentItem from './checkin_comment_item';
 
 const CheckinFeedItem = ({
     checkin, 
@@ -11,7 +13,10 @@ const CheckinFeedItem = ({
     currentUserId,
     deleteCheckin,
     likeCheckin,    
-    dislikeCheckin,    
+    dislikeCheckin,  
+    createComment,
+    deleteComment,
+    users  
 
     }) => {
 
@@ -23,9 +28,29 @@ const CheckinFeedItem = ({
     };
 
     const handleDelete = (e) => {
-        // debugger
         e.preventDefault
         deleteCheckin(checkin.id)
+    }
+
+    let commentForm = <CheckinCommentForm 
+                        checkinId={checkin.id}
+                        createComment={createComment}
+                        currentUserId={currentUserId}
+                      />;
+    const comments = checkin.comments.map(comment =>{
+        return <CheckinCommentItem
+                key={comment.id}
+                comment={comment}
+                commentUser={users[comment.user_id]}
+                currentUser={users[currentUserId]}
+                deleteComment={deleteComment}
+               />
+    })
+
+    const handleComment = () => {
+        const form = document.getElementById('comment-form');
+        form.classList.toggle('hidden')
+        form.classList.toggle('flex')
     }
 
     let likeClass = 'checkin-toast';
@@ -110,7 +135,7 @@ const CheckinFeedItem = ({
                     {checkinImg}
                 </div>
                 <div className='checkin-interact'>
-                    <button className='checkin-comment'>
+                    <button onClick={handleComment} className='checkin-comment'>
                         <i className="fas fa-comment-alt"></i>
                         <p> Comment</p>
                     </button>
@@ -125,6 +150,8 @@ const CheckinFeedItem = ({
                     {delCheckin}
                 </div>
                 {checkinLikeCount}
+                {comments}
+                {commentForm}
             </div>
             <div className='checkin-beverage-img'>
                 <img src={checkinBeverage.imgUrl} alt=""/>

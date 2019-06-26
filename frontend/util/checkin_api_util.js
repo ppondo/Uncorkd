@@ -17,7 +17,6 @@ export const fetchCheckin = (id) => (
 )
 
 export const createCheckin = (checkin) => {
-// debugger
     return (
         $.ajax({
             method: 'post',
@@ -29,7 +28,6 @@ export const createCheckin = (checkin) => {
     )
 }
 
-
 export const deleteCheckin = (id) => {
     return $.ajax({
         method: 'delete',
@@ -37,6 +35,7 @@ export const deleteCheckin = (id) => {
     });
 }
 
+// likes 
 export const likeCheckin = (id) => (
     $.ajax({
         url: '/api/likes',
@@ -52,3 +51,29 @@ export const dislikeCheckin = (id) => (
         data: { id }
     })
 )
+
+// comments
+// export const fetchComments = (checkin_id) => (
+//     $.ajax({
+//         url: '/api/comments',
+//         method: 'post',
+//         data: { checkin_id }
+//     })
+// ) 
+
+export const createComment = (comment) => (
+    $.ajax({
+        url: '/api/comments',
+        method: 'post',
+        data: comment 
+    })
+) 
+
+
+export const deleteComment = (id) => (
+    $.ajax({
+        url: '/api/comments',
+        method: 'delete',
+        data: { id }
+    })
+) 
