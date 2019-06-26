@@ -1,3 +1,4 @@
+require 'open-uri'
 class Api::UsersController < ApplicationController
     def index
         @users = User.all
@@ -11,7 +12,7 @@ class Api::UsersController < ApplicationController
 
     def create
         @user = User.new(user_params)
-
+        attach_avatar(@user)
         if @user.save
             sign_in(@user)
             render :show
@@ -34,5 +35,10 @@ class Api::UsersController < ApplicationController
                                         :gender,
                                         :country,
                                         :birthday)
+        end
+
+        def attach_avatar(user)
+            file1 = open('https://uncorkd-prod.s3.amazonaws.com/default_avatar.jpg')
+            user.img.attach(io: file1, filename: 'default_avatar.jpg')
         end
 end
