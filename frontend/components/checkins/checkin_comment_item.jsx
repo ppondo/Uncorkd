@@ -12,21 +12,36 @@ const CheckinCommentItem = ({
     }
     let deleteButton = <div></div>;
 
-    if (commentUser === currentUser) {
-        deleteButton = <div className='commentDelete'onClick={handleDelete}>Delete</div>
+    if (commentUser.id === currentUser.id) {
+        deleteButton = <div className='comment-delete'onClick={handleDelete}>Delete</div>
     }
-    debugger
+
+    const monthNames = [
+        "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+    ];
+
+    let dateObj = new Date(comment.created_at);
+    let month = monthNames[dateObj.getUTCMonth()];
+    let day = dateObj.getUTCDate();
+    let year = dateObj.getUTCFullYear();
+
+    const date = month + " " + day + " " + year;
+
     return (
         <div className='comment-item'>
-            <img className='checkin-avatar-user' src={commentUser.imgUrl} alt="" />
+            <img className='comment-avatar' src={commentUser.imgUrl} alt="" />
             <div className='comment-right'>
                 <div className='comment-body'>
                     <Link 
                         to={`/users/${commentUser.id}`} 
                         className='comment-user'>{commentUser.username}: </Link>
-                     { comment.body}
+                     {comment.body}
                 </div>
-                {deleteButton}
+                <div className='comment-bottom'>
+                    <div className='checkin-date'>{date}</div>
+                    {deleteButton}
+                </div>
             </div>
         </div>
     )

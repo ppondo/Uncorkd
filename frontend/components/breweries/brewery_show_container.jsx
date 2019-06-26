@@ -18,7 +18,9 @@ const mdp = dispatch => ({
     fetchBeverages: (filterObj) => dispatch(fetchBeverages(filterObj)),
     fetchUsers: () => dispatch(fetchUsers()),
     likeCheckin: (id) => dispatch(likeCheckin(id)),
-    dislikeCheckin: (id) => dispatch(dislikeCheckin(id))
+    dislikeCheckin: (id) => dispatch(dislikeCheckin(id)),
+    deleteComment: (id) => dispatch(deleteComment(id)),
+    createComment: (comment) => dispatch(createComment(comment))
 })
 
 export default connect(msp, mdp)(BreweryShow);
