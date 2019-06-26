@@ -111,8 +111,8 @@ class CheckinFeed extends React.Component {
             <div className='home-footer'>
                 <div className='home-footer-nav'>
                     <a className='home-footer-link' href='https://github.com/ppondo/Uncorkd'>Github</a>
-                    <a className='home-footer-link' href='www.linkedin.com/in/patrickpondo' >LinkedIn</a>
-                    <a className='home-footer-link' href='' >Personal Site</a>
+                    <a className='home-footer-link' href='https://www.linkedin.com/in/patrickpondo' >LinkedIn</a>
+                    <a className='home-footer-link' href='https://ppondo.github.io' >Personal Site</a>
                     <Link className='home-footer-link' to='/breweries' >Breweries</Link>
                 </div>
             </div>

@@ -71,8 +71,8 @@ export default ({currentUser, logOut}) => {
             <div className='footer'>
                 <div className='footer-nav'>
                     <a className='footer-link' href='https://github.com/ppondo/Uncorkd'>Github</a>
-                    <a className='footer-link' href='www.linkedin.com/in/patrickpondo' >LinkedIn</a>
-                    <a className='footer-link' href='' >Personal Site</a>
+                    <a className='footer-link' href='https://www.linkedin.com/in/patrickpondo' >LinkedIn</a>
+                    <a className='footer-link' href='https://ppondo.github.io' >Personal Site</a>
                 </div>
                 <div>
                     <p className='footer-tag'>Uncorkd 2019</p>
