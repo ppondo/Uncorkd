@@ -37,15 +37,18 @@ const CheckinFeedItem = ({
                         createComment={createComment}
                         currentUserId={currentUserId}
                       />;
-    const comments = checkin.comments.map(comment =>{
-        return <CheckinCommentItem
-                key={comment.id}
-                comment={comment}
-                commentUser={users[comment.user_id]}
-                currentUser={users[currentUserId]}
-                deleteComment={deleteComment}
-               />
-    })
+    let comments = <div></div>;
+    if (checkin.comments.length >= 1) {
+        comments = checkin.comments.map(comment =>{
+            return <CheckinCommentItem
+                    key={comment.id}
+                    comment={comment}
+                    commentUser={users[comment.user_id]}
+                    currentUser={users[currentUserId]}
+                    deleteComment={deleteComment}
+                />
+        })
+    }   
 
     const handleComment = () => {
         const form = document.getElementById('comment-form');
