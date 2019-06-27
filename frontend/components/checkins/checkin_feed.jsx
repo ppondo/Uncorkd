@@ -29,7 +29,7 @@ class CheckinFeed extends React.Component {
         if (this.props.checkins === undefined || this.props.users === undefined) {
             return null
         };
-
+        window.scrollTo(0,0)
         const CheckinFeedItems = this.props.checkins.map(checkin => {
             return (
                 <CheckinFeedItem
