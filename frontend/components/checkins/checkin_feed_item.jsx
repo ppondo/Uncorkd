@@ -51,7 +51,7 @@ const CheckinFeedItem = ({
     }   
 
     const handleComment = () => {
-        const form = document.getElementById('comment-form');
+        const form = document.getElementById(`id-${checkin.id}`);
         form.classList.toggle('hidden')
         form.classList.toggle('flex')
     }

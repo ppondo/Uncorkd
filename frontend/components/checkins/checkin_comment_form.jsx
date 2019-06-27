@@ -14,7 +14,7 @@ class CheckinCommentForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.createComment(this.state);
-        const form = document.getElementById('comment-form');
+        const form = document.getElementById(`id-${this.state.checkin_id}`);
         form.classList.add('hidden')
         form.classList.remove('flex')
         this.setState({body: ''})
@@ -28,7 +28,7 @@ class CheckinCommentForm extends React.Component {
 
     render() {
         return (
-            <form id='comment-form'className='comment-form hidden'>
+            <form id={`id-${this.state.checkin_id}`} className='comment-form hidden'>
                 <textarea 
                     id='comment-form-body'
                     className='comment-form-body' 
