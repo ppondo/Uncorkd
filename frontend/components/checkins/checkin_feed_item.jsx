@@ -149,7 +149,7 @@ const CheckinFeedItem = ({
                 </div>
                 <div className='date-detail'>
                     <div className='checkin-date'>{date}</div>
-                    <Link className='date-detail-item' to='/home'>View Detailed Check-in</Link>
+                    {/* <Link className='date-detail-item' to='/home'>View Detailed Check-in</Link> */}
                     {delCheckin}
                 </div>
                 {checkinLikeCount}
