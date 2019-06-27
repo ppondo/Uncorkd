@@ -42,7 +42,7 @@ const CheckinCommentItem = ({
                      {comment.body}
                 </div>
                 <div className='comment-bottom'>
-                    <div className='checkin-date'>{date}</div>
+                    <div className='checkin-date date-comment'>{date}</div>
                     {deleteButton}
                 </div>
             </div>
