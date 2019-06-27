@@ -27,6 +27,7 @@ class UserProfile extends React.Component {
         if (this.props.checkins === undefined || this.props.user === undefined) {
             return null
         };
+        window.scrollTo(0, 0)
 
         const headerStyle = { background: `${window.profileHeader}`}
             

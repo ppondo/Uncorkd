@@ -7,12 +7,15 @@ const CheckinCommentItem = ({
     currentUser,
     deleteComment
 }) => {
+    if (commentUser === undefined || currentUser === undefined) {
+        return null
+    }
     const handleDelete = () => {
         deleteComment(comment.id);
     }
     let deleteButton = <div></div>;
 
-    if (commentUser.id === currentUser.id) {
+    if (commentUser !== undefined && currentUser !== undefined && commentUser.id === currentUser.id) {
         deleteButton = <div className='comment-delete'onClick={handleDelete}>Delete</div>
     }
 

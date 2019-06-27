@@ -32,6 +32,7 @@ class BeerBreweryShow extends React.Component {
         if (this.props.brewery === undefined || this.props.brewery.beverages === undefined) {
             return null
         }
+        window.scrollTo(0, 0)
 
         let avgRate;
         if (this.props.brewery.avgRating <= 0) {

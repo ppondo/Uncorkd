@@ -38,7 +38,7 @@ const CheckinFeedItem = ({
                         currentUserId={currentUserId}
                       />;
     let comments = <div></div>;
-    if (checkin.comments.length >= 1) {
+    if (checkin.comments.length > 0) {
         comments = checkin.comments.map(comment =>{
             return <CheckinCommentItem
                     key={comment.id}
@@ -54,6 +54,10 @@ const CheckinFeedItem = ({
         const form = document.getElementById(`id-${checkin.id}`);
         form.classList.toggle('hidden')
         form.classList.toggle('flex')
+    }
+    let comId;
+    if (checkin) {
+
     }
 
     let likeClass = 'checkin-toast';

@@ -10,6 +10,7 @@ class BreweryIndex extends React.Component {
     }
 
     render() {
+        window.scrollTo(0, 0)
         const BrewIndexItems = this.props.breweries.map( brewery => {
             return (
                 <BreweryIndexItem

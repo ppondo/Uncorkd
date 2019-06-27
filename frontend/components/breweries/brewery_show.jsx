@@ -30,6 +30,7 @@ class BreweryShow extends React.Component {
 
     render() {
         // debugger
+        window.scrollTo(0, 0)
         const CheckinFeedItems = this.props.checkins.map(checkin => {
             return (
                 <CheckinFeedItem
