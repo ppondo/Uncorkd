@@ -15,6 +15,7 @@ with their friends. Users can also browse through the collection of breweries an
     <li> Users can check-in a beverage they've tried, share their thoughts, and incldue a picture! </li>
     <li> Users have a profile page that displays their check-ins and stats for their account. </li>
     <li> Display pages for breweries and beverages are updated to show the proper ratings and check-in counts </li>
+    <li> Likes and Comments! Users are able to comment on checkins and like them. </li>
 </ul>
 
 ## Technologies
@@ -80,7 +81,6 @@ class Api::CheckinsController < ApplicationController
 ## Upcoming Features
 
 <ul>
-    <li> Likes and Comments! Users will be able to comment on checkins and like them. </li>
     <li> Search! Users will be able to search the app for particular beverages, breweries, or users. </li>
     <li> Badges! Users will receive special badges for reaching milestones (number of checkins, checking in certain styles, etc.) </li>
     <li> Friends! Users will be able to add friends to interact with on the app. </li>
