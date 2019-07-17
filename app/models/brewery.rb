@@ -23,12 +23,12 @@ class Brewery < ApplicationRecord
     has_one_attached :img
 
     def self.avg_rating(brewery)
-        sum = 0.0
+        total = 0.0
         brewery.checkins.each do |checkin|
-            sum += checkin.rating
+            total += checkin.rating
         end
 
-        return (sum / brewery.checkins.length)
+        return (total / brewery.checkins.length)
     end
 
     def self.num_ratings(brewery)
