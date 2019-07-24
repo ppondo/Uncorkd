@@ -35,7 +35,8 @@ class CheckinCommentForm extends React.Component {
                     value={this.state.body}
                     cols="15" rows="5" 
                     onChange={this.update('body')}
-                    placeholder='Leave a comment...'>
+                    placeholder='Leave a comment...'
+                    maxLength="140">
                 </textarea>
                 <div className='comment-form-bottom'>
                     <div className='comment-body-count'>{this.state.body.length}/140</div>
